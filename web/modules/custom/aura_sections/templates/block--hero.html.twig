@@ -1,0 +1,32 @@
+{#
+  Hero block template for AURA
+  Variables:
+    - title
+    - subtitle
+    - button_text
+    - button_link
+    - background_video
+    - background_video_poster
+#}
+<section class="aura-hero">
+  <div class="aura-hero__media">
+    {% if background_video %}
+      {% set poster_fallback = background_video_poster|default(base_path ~ 'themes/custom/aura_theme/images/frame_000.png') %}
+      <video class="aura-hero__video" autoplay muted loop playsinline poster="{{ poster_fallback }}">
+        <source src="{{ background_video }}" type="video/mp4">
+      </video>
+    {% endif %}
+  </div>
+
+  <div class="aura-hero__content">
+    {% if title %}
+      <h1 class="aura-hero__title">{{ title }}</h1>
+    {% endif %}
+    {% if subtitle %}
+      <h2 class="aura-hero__subtitle">{{ subtitle }}</h2>
+    {% endif %}
+    {% if button_text %}
+      <a class="aura-hero__button" href="{{ button_link }}">{{ button_text }}</a>
+    {% endif %}
+  </div>
+</section>

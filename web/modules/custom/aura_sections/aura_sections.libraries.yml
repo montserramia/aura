@@ -1,0 +1,5 @@
+hero:
+  version: 1.x
+  css:
+    theme:
+      css/hero.css: {}

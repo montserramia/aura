@@ -1,0 +1,5 @@
+name: Aura Landing Routes
+package: Custom
+type: module
+core_version_requirement: ^10 || ^11
+description: 'Placeholder to allow disabling missing module.'

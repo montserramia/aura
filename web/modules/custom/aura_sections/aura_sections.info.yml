@@ -1,0 +1,7 @@
+name: 'AURA Sections'
+type: module
+description: 'Blocs personalitzats per seccions AURA (Hero)'
+core_version_requirement: ^10 || ^11
+package: 'Custom'
+dependencies:
+  - drupal:block

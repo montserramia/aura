@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ * AURA Sections custom module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function aura_sections_theme() {
+  return [
+    'aura_hero' => [
+      'variables' => [
+        'title' => NULL,
+        'subtitle' => NULL,
+        'button_text' => NULL,
+        'button_link' => NULL,
+        'background_video' => NULL,
+        'foreground_image' => NULL,
+        'pattern_image' => NULL,
+      ],
+      'template' => 'block--hero',
+      'path' => \Drupal::service('extension.list.module')->getPath('aura_sections') . '/templates',
+    ],
+  ];
+}
