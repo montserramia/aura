@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - aura_theme
+id: aura_theme_local_actions
+theme: aura_theme
+region: content_above
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: system
+  label_display: '0'
+visibility: {  }

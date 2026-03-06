@@ -1,0 +1,289 @@
+/**
+ * AURA - Blocs de contingut de 2 columnes
+ * S'integren amb l'estructura existent del tema
+ * Utilitzen les variables i classes globals de aura-style.css
+ */
+
+/* ========================================
+   BLOC 2 COLUMNES - Estructura base
+   ======================================== */
+
+/* Contenidor de 2 columnes dins de .section-content */
+.aura-two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  /* margin: 0 calc(var(--aura-spacing) * -1);
+  Expandir fins als marges de .section-content */
+  padding: 0 0 10px;
+  position: relative;
+}
+
+.aura-tag {
+  bottom: 0 !important;
+  height: unset !important;
+  left: 0 !important;
+  margin: 0 !important;
+  max-height: unset !important;
+  max-width: unset !important;
+  min-height: unset !important;
+  min-width: unset !important;
+  padding: 0 !important;
+  position: absolute !important;
+  right: 0 !important;
+  top: 0 !important;
+  width: unset !important;
+  z-index: unset !important;
+}
+
+@media (max-width: 768px) {
+  .aura-two-column {
+    grid-template-columns: 1fr;
+    margin: 0 calc(var(--aura-spacing-mobile) * -1);
+  }
+}
+
+/* ========================================
+   COLUMNES - Espaiat i fons
+   ======================================== */
+
+.aura-column {
+  padding: var(--aura-spacing);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 400px;
+}
+
+@media (max-width: 768px) {
+  .aura-column {
+    padding: var(--aura-spacing-mobile);
+    min-height: 300px;
+  }
+}
+
+/* Centrar contingut */
+.aura-column--centered {
+  align-items: center;
+}
+
+/* ========================================
+   COLORS DE FONS - Utilitzant variables del tema
+   ======================================== */
+
+.aura-column--light {
+  background-color: var(--aura-light-bg);
+}
+
+.aura-column--white {
+  background-color: var(--aura-white);
+}
+
+.aura-column--dark {
+  background-color: var(--aura-dark-bg);
+  color: var(--aura-white);
+}
+
+.aura-column--transparent {
+  background-color: transparent;
+}
+
+/* ========================================
+   ETIQUETES I TIPOGRAFIA
+   ======================================== */
+
+.aura-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--aura-white);
+  background-color: var(--aura-black);
+  padding: 10px 20px;
+  margin-bottom: 50px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* Variants de color per labels */
+.aura-label--light {
+  background-color: var(--aura-gray);
+}
+
+/* Els títols i subtítols usen els estils globals del tema */
+.aura-column--text {
+  /* Hereta de aura-style.css */
+  width: 70%;
+  margin: 0 10% 0 0;
+}
+
+.aura-column h2 {
+  /* Hereta de aura-style.css */
+  margin-bottom: 3em;
+}
+
+.aura-column h3 {
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.aura-column p {
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.aura-column ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 20px 0;
+}
+
+.aura-column ul li {
+  margin-bottom: 15px;
+  padding-left: 20px;
+  position: relative;
+  color: var(--aura-black);
+}
+
+.aura-column ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--aura-gray);
+  font-weight: bold;
+}
+
+/* ========================================
+   IMATGES I SVG
+   ======================================== */
+
+.aura-image-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aura-image-wrapper img,
+.aura-image-wrapper svg {
+  max-width: 99%;
+  height: auto;
+}
+
+/* ========================================
+   TESTIMONIS
+   ======================================== */
+
+.aura-testimonial blockquote {
+  font-size: 20px;
+  line-height: 1.7;
+  font-style: italic;
+  margin: 0 0 20px 0;
+  color: var(--aura-text);
+}
+
+.aura-testimonial cite {
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  color: var(--aura-text);
+}
+
+/* Dots de navegació */
+.aura-dots {
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.aura-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--aura-light-gray);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.aura-dot--active {
+  background-color: var(--aura-black);
+}
+
+/* ========================================
+   FORMULARIS - Integració amb estils del tema
+   ======================================== */
+
+.aura-form-group {
+  margin-bottom: 20px;
+}
+
+.aura-form-label {
+  display: block;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+  color: var(--aura-text);
+  font-weight: 600;
+}
+
+.aura-form-input,
+.aura-form-textarea,
+.aura-form-select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--aura-border);
+  background-color: var(--aura-white);
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--aura-text);
+  transition: border-color 0.3s ease;
+}
+
+.aura-form-input:focus,
+.aura-form-textarea:focus,
+.aura-form-select:focus {
+  outline: none;
+  border-color: var(--aura-black);
+}
+
+.aura-form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.aura-form-submit {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--aura-black);
+  color: var(--aura-white);
+  border: 2px solid var(--aura-black);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.aura-form-submit:hover {
+  background-color: transparent;
+  color: var(--aura-black);
+}
+
+/* ========================================
+   RESPONSIVE - Ajustos específics
+   ======================================== */
+
+@media (max-width: 768px) {
+  .aura-image-wrapper img,
+  .aura-image-wrapper svg {
+    max-width: 90%;
+  }
+  
+  .aura-testimonial blockquote {
+    font-size: 18px;
+  }
+}

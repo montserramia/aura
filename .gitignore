@@ -1,0 +1,60 @@
+# Drupal core
+/sites/*/files
+/sites/*/private
+/core
+/profiles/*
+!/profiles/README.txt
+/modules/*
+!/modules/README.txt
+/themes/*
+!/themes/README.txt
+!/themes/custom
+/themes/contrib
+
+# Dependencies
+/vendor
+/node_modules
+/.idea
+/.vscode
+
+# Composer
+composer.lock
+
+# DDEV
+/.ddev/.gitignore
+/.ddev/config.*.yaml
+/.ddev/docker-compose.*.yaml
+/.ddev/providers
+/.ddev/web-entrypoint.d
+/.ddev/mysql
+/.ddev/postgres
+/.ddev/.webimageBuild
+/.ddev/.dbimageBuild
+/.ddev/.sshimageBuild
+/.ddev/.routerimageBuild
+/.ddev/traefik
+/.ddev/config.*.yaml.example
+/.ddev/addon-metadata
+
+# Backups
+*.sql
+*.sql.gz
+*.sql.xz
+*.bak
+*.backup
+*-backup-*
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+/tmp/
+temp/

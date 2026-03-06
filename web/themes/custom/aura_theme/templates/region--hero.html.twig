@@ -1,0 +1,9 @@
+{#
+  Override template for Hero region in AURA theme
+  Only shows AURA Hero blocks, hides Ruhi content
+#}
+{% if content %}
+  <div class="region region-hero">
+    {{ content }}
+  </div>
+{% endif %}

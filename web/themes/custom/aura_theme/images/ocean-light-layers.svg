@@ -1,0 +1,176 @@
+<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient oceà (capa exterior) -->
+    <radialGradient id="oceanGrad">
+      <stop offset="0%" style="stop-color:#6B8CAE;stop-opacity:0.4"/>
+      <stop offset="70%" style="stop-color:#6B8CAE;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#6B8CAE;stop-opacity:0"/>
+    </radialGradient>
+    
+    <!-- Gradient capa mitjana (més fosca) -->
+    <radialGradient id="middleGrad">
+      <stop offset="0%" style="stop-color:#4a6a8e;stop-opacity:0.5"/>
+      <stop offset="70%" style="stop-color:#4a6a8e;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#4a6a8e;stop-opacity:0"/>
+    </radialGradient>
+    
+    <!-- Gradient llum central (blanca amb blur) -->
+    <radialGradient id="lightGrad">
+      <stop offset="0%" style="stop-color:#e6e5eb;stop-opacity:0.9"/>
+      <stop offset="40%" style="stop-color:#f4f4f8;stop-opacity:0.6"/>
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0"/>
+    </radialGradient>
+    
+    <!-- Blur ample per a la llum -->
+    <filter id="wideBlur">
+      <feGaussianBlur stdDeviation="25"/>
+    </filter>
+    
+    <!-- Blur mig per capa mitjana -->
+    <filter id="mediumBlur">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+    
+    <!-- Blur suau per oceà -->
+    <filter id="softBlur">
+      <feGaussianBlur stdDeviation="0"/>
+    </filter>
+  </defs>
+  
+  <!-- CAPA 1: OCEÀ (més gran, color base, moviment lent) -->
+  <circle cx="550" cy="550" r="320" fill="url(#oceanGrad)" filter="url(#softBlur)">
+    <!-- Variació de mida (respiració lenta) -->
+    <animate 
+      attributeName="r" 
+      values="320;245;215;240;320" 
+      dur="2s" 
+      repeatCount="indefinite"/>
+    
+    <!-- Moviment horitzontal subtil -->
+    <animate 
+      attributeName="cx" 
+      values="300;310;295;308;300" 
+      dur="14s" 
+      repeatCount="indefinite"/>
+    
+    <!-- Moviment vertical subtil -->
+    <animate 
+      attributeName="cy" 
+      values="300;295;305;298;300" 
+      dur="13s" 
+      repeatCount="indefinite"/>
+    
+    <!-- Variació d'opacitat -->
+    <animate 
+      attributeName="opacity" 
+      values="0.7;0.85;0.65;0.8;0.7" 
+      dur="11s" 
+      repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- CAPA 2: FORMA INTERMÈDIA (dins l'oceà, més fosca, moviment més ràpid) -->
+  <ellipse cx="300" cy="300" rx="80" ry="90" fill="url(#middleGrad)" filter="url(#mediumBlur)">
+    <!-- Variació de mida X -->
+    <animate 
+      attributeName="rx" 
+      values="140;165;130;158;140" 
+      dur="8s" 
+      repeatCount="indefinite"/>
+    
+    <!-- Variació de mida Y (desincronitzada) -->
+    <animate 
+      attributeName="ry" 
+      values="160;180;145;175;160" 
+      dur="9s" 
+      repeatCount="indefinite"/>
+    
+    <!-- Moviment horitzontal (més pronunciat) -->
+    <animate 
+      attributeName="cx" 
+      values="300;315;285;312;300" 
+      dur="10s" 
+      repeatCount="indefinite"/>
+    
+    <!-- Moviment vertical -->
+    <animate 
+      attributeName="cy" 
+      values="300;290;310;293;300" 
+      dur="9.5s" 
+      repeatCount="indefinite"/>
+    
+    <!-- Variació d'opacitat -->
+    <animate 
+      attributeName="opacity" 
+      values="0.6;0.8;0.55;0.75;0.6" 
+      dur="8.5s" 
+      repeatCount="indefinite"/>
+  </ellipse>
+  
+  <!-- CAPA 3: LLUM CENTRAL (blanca, blur ample, moviment orgànic) -->
+  <ellipse cx="300" cy="300" rx="60" ry="80" fill="url(#lightGrad)" filter="url(#wideBlur)">
+    <!-- Variació de mida X (irregular) -->
+    <animate 
+      attributeName="rx" 
+      values="60;80;50;75;60" 
+      dur="5s" 
+      repeatCount="indefinite"/>
+    
+    <!-- Variació de mida Y (desincronitzada) -->
+    <animate 
+      attributeName="ry" 
+      values="80;100;70;95;80" 
+      dur="6s" 
+      repeatCount="indefinite"/>
+    
+    <!-- Moviment horitzontal (el més ràpid) -->
+    <animate 
+      attributeName="cx" 
+      values="300;320;280;315;300" 
+      dur="7s" 
+      repeatCount="indefinite"/>
+    
+    <!-- Moviment vertical (irregular) -->
+    <animate 
+      attributeName="cy" 
+      values="300;285;315;290;300" 
+      dur="6.5s" 
+      repeatCount="indefinite"/>
+    
+    <!-- Variació d'opacitat (més dinàmica) -->
+    <animate 
+      attributeName="opacity" 
+      values="0.8;1;0.7;0.95;0.8" 
+      dur="5.5s" 
+      repeatCount="indefinite"/>
+  </ellipse>
+  
+  <!-- LLUM ADICIONAL: Halo exterior de la llum (per reforçar efecte) -->
+  <circle cx="200" cy="200" r="90" fill="url(#lightGrad)" filter="url(#wideBlur)" opacity="0.4">
+    <!-- Variació de mida -->
+    <animate 
+      attributeName="r" 
+      values="90;110;85;105;90" 
+      dur="7s" 
+      repeatCount="indefinite"/>
+    
+    <!-- Segueix la llum central (amb desfasament) -->
+    <animate 
+      attributeName="cx" 
+      values="300;318;282;313;300" 
+      dur="7.2s" 
+      repeatCount="indefinite"/>
+    
+    <animate 
+      attributeName="cy" 
+      values="300;287;313;292;300" 
+      dur="6.8s" 
+      repeatCount="indefinite"/>
+    
+    <!-- Opacitat variable -->
+    <animate 
+      attributeName="opacity" 
+      values="0.4;0.6;0.3;0.55;0.4" 
+      dur="6s" 
+      repeatCount="indefinite"/>
+  </circle>
+</svg>

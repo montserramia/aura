@@ -1,0 +1,16 @@
+{% if slider_code %}
+  <section class="slider">
+    <div class="container">
+      <div class="slider-container">
+        <div class="slider-text">
+          {{ slider_code|raw }}
+        </div>
+        {% if slider_image_path %}
+          <div class="slider-image">
+            <img src="{{ slider_image_path }}" alt="" />
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+{% endif %}

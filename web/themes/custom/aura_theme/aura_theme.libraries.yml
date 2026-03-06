@@ -1,0 +1,19 @@
+global-styling:
+  version: 1.x
+  css:
+    theme:
+      css/aura-style.css: {}
+      css/aura-blocks.css: {}
+  js:
+    js/smooth-scroll.js: {}
+
+ubuntu-fonts:
+  css:
+    theme:
+      https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap:
+        type: external
+        minified: true
+        preprocess: false
+        browsers:
+          IE: false
+          '!IE': true

@@ -1,0 +1,49 @@
+<header class="header">
+  {% if page.header_top_left or page.header_top_right %}
+    <div class="header-top">
+      <div class="container">
+        <div class="header-top-container">
+          {% if page.header_top_left %}
+            <div class="header-top-left">{{ page.header_top_left }}</div>
+          {% endif %}
+          {% if page.header_top_right %}
+            <div class="header-top-right">{{ page.header_top_right }}</div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="header-main">
+    <div class="container">
+      <div class="header-container">
+        {% if page.header %}
+          <div class="site-brand">
+            {{ page.header }}
+          </div>
+        {% endif %}
+
+        {% if page.primary_menu or page.search_box %}
+          <div class="header-right">
+            {% if page.primary_menu %}
+              <nav id="primary-navigation" class="primary-navigation" role="navigation">
+                {{ page.primary_menu }}
+              </nav>
+            {% endif %}
+            {% if page.search_box %}
+              <div class="header-search">{{ page.search_box }}</div>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  {% if is_front and slider_show %}
+    {% if slider_content %}
+      <section class="hero-slider">{{ slider_content }}</section>
+    {% endif %}
+  {% elseif not is_front and page.page_header %}
+    <div class="page-header">{{ page.page_header }}</div>
+  {% endif %}
+</header>

@@ -1,0 +1,19 @@
+{#
+/**
+ * @file
+ * Bloc de branding personalitzat per AURA
+ */
+#}
+<div class="site-branding">
+  {% if site_logo %}
+    <a href="{{ path('<front>') }}" class="site-logo-link">
+      <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" class="site-logo" />
+    </a>
+  {% endif %}
+  
+  {% if site_name %}
+    <a href="{{ path('<front>') }}" class="site-name" rel="home">
+      {{ site_name }}
+    </a>
+  {% endif %}
+</div>

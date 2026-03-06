@@ -1,0 +1,762 @@
+/* ========================================
+   AURA Theme - Colors del disseny Wix
+   ======================================== */
+
+:root {
+  /* Colors principals del disseny Wix */
+  --aura-white: #FFFFFF;
+  --aura-black: #000000;
+  --aura-dark-bg: #0a0a0a;
+  --aura-text: #1a1a1a;
+  --aura-gray: #666666;
+  --aura-light-gray: #E5E5E5;
+  --aura-border: #D1D1D1;
+  --aura-light-bg: #E6E5EB ;  /* Athens gray */
+  
+  /* Overlays semi-transparents */
+  --aura-overlay-white: rgba(255, 255, 255, 0.95);
+  --aura-overlay-light: rgba(255, 255, 255, 0.98);
+  --aura-card: rgba(255, 255, 255, 0.95);
+  --aura-overlay-blue: rgba(209, 218, 230, 0.95);
+  --aura-card-blur: 6px;
+  
+  /* Espaciat */
+  --aura-spacing: 50px;
+  --aura-spacing-mobile: 20px;
+}
+
+/* ========================================
+   GLOBAL STYLES - Fons fosc base
+   ======================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  color: #f5f5f5;
+  background-color: var(--aura-dark-bg);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  font-weight: 400; /* Regular */
+  letter-spacing: 0.5px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ========================================
+   HEADER - Fix amb overlay semi-transparent
+   ======================================== */
+
+.header-top, .header {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0.5rem 0;
+    background: var(--aura-overlay-light);
+}
+
+.site-header {
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px var(--aura-spacing);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 400; /* Per sota del toolbar d'admin de Drupal (501+) */
+  backdrop-filter: blur(10px);
+  background: var(--aura-overlay-light);
+}
+
+
+/* Logo i Branding */
+.site-branding {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.site-logo {
+  height: 45px;
+}
+
+.site-name,
+.site-name a {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--aura-black);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.site-name:hover,
+.site-name a:hover {
+  color: var(--aura-gray);
+}
+
+/* ========================================
+   MENÚ PRINCIPAL - Estil Wix
+   ======================================== */
+
+#primary-navigation {
+  padding-bottom: 4px;
+  /* Afegim padding horitzontal per crear marge lateral */
+  padding-left: 20px; /* Ajusta aquest valor segons sigui necessari */
+  padding-right: 20px; /* Ajusta aquest valor segons sigui necessari */
+}
+
+#primary-navigation ul {
+  display: flex !important;
+  gap: 20px !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  align-items: center !important;
+}
+
+#primary-navigation ul > li {
+  margin: 0;
+  padding: 0 50px;
+}
+
+#primary-navigation a {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+  color: #5C5B5E;
+  text-decoration: none;
+  padding: 2px;
+  text-align: end;
+  border: 1px solid #5C5B5E;
+  border-bottom: 0;
+  border-radius: 4px 5px 0 0;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  display: flex;
+  line-height: 1.5em;
+  justify-content: flex-end;
+  direction: ltr;
+  flex-grow: 1;
+  width: calc(100% + 8em);
+}
+
+#primary-navigation a:hover,
+#primary-navigation a.is-active {
+  background-color: #5C5B5E !important;
+  color: #ffffff !important;
+  border-color: #5C5B5E !important;
+  border-bottom: 0 !important;
+}
+
+/* ========================================
+   BOTONS - Estil Wix (vora, fons transparent)
+   ======================================== */
+
+.btn,
+.cta-button,
+a.cta-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background: transparent;
+  color: var(--aura-text);
+  text-decoration: none;
+  border: 1px solid var(--aura-border);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover,
+.cta-button:hover {
+  background: var(--aura-black);
+  color: var(--aura-white);
+  border-color: var(--aura-black);
+}
+
+/* ========================================
+   CONTINGUT PRINCIPAL - Overlay blanc
+   ======================================== */
+
+.main-content {
+  background: var(--aura-overlay-light);
+  position: relative;
+}
+
+.main-content > section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px var(--aura-spacing);
+}
+
+/* Full-width per blocs que han de sortir del contenidor */
+.main-content > section:has(.aura-comhofem) {
+  max-width: none;
+  padding: 0;
+  margin: 0;
+}
+
+.content-wrapper {
+  padding: 0 5%;
+}
+
+.page-wrapper {
+  background: transparent;
+}
+
+/* Hero Section amb overlay */
+.hero-region,
+.section-hero {
+  min-height: calc(100vh - 80px);
+  align-items: center;
+  /* padding: var(--aura-spacing);
+  display: flex; */
+  background: var(--aura-overlay-white);
+  position: relative;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700; /* Bold — transmet seguretat i claredat */
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: var(--aura-black);
+}
+
+.hero-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: var(--aura-text);
+}
+
+/* ========================================
+   SECTIONS GENERALS - Amb overlays
+   ======================================== */
+
+.section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px var(--aura-spacing);
+  background: var(--aura-overlay-white);
+  position: relative;
+}
+
+/* Targetes translúcides al estil Wix */
+.section-shell {
+  background: var(--aura-card);
+  color: var(--aura-text);
+  backdrop-filter: blur(var(--aura-card-blur));
+  -webkit-backdrop-filter: blur(var(--aura-card-blur));
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  border-radius: 16px;
+  padding: clamp(24px, 5vw, 48px);
+  margin: clamp(16px, 4vw, 40px) auto;
+  max-width: 1200px;
+}
+
+/* Hero: evitar doble padding per ampliar el logo */
+.hero-region.section-shell {
+  padding: 0;
+}
+
+/* Seccions fosques (sense overlay) */
+.section-dark,
+.section-content.dark {
+  background: transparent;
+  color: var(--aura-white);
+}
+
+.section-dark h2,
+.section-dark h3,
+.section-dark p,
+.section-content.dark h2,
+.section-content.dark h3,
+.section-content.dark p {
+  color: var(--aura-white);
+}
+
+.section-title {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--aura-gray);
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  margin: 0 0 24px;
+  color: var(--aura-black);
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 42px;
+  line-height: 1.3;
+  margin-bottom: 25px;
+  color: var(--aura-black);
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 1.5em;
+  color: var(--aura-black);
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 20px;
+  margin-bottom: 1.5em;
+  color: var(--aura-black);
+  font-weight: 500;
+}
+
+h5 {
+  font-size: 16px;
+  margin-bottom: 1.5em;
+  color: var(--aura-black);
+  font-weight: 500;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--aura-text);
+  margin-bottom: 20px;
+}
+
+.main-content a {
+  color: var(--aura-gray);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.main-content a:hover {
+  color: var(--aura-black);
+}
+
+/* ========================================
+   FOOTER - Amb overlay
+   ======================================== */
+
+.site-footer {
+  background: var(--aura-overlay-white);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 60px var(--aura-spacing);
+  color: var(--aura-text);
+  position: relative;
+}
+
+/* ========================================
+   MENU MÒBIL (Hamburger)
+   ======================================== */
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.mobile-menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: var(--aura-black);
+  transition: 0.3s;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 768px) {
+  .site-header {
+    padding: 15px var(--aura-spacing-mobile);
+  }
+
+  #primary-navigation {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    z-index: 399; /* Per sota del toolbar d'admin (501+) */
+    background: var(--aura-overlay-light);
+    flex-direction: column;
+    gap: 0;
+    padding: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(10px);
+  }
+
+  #primary-navigation.is-open {
+    display: flex;
+  }
+
+  .primary-menu {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+
+  .primary-menu a {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--aura-light-gray);
+    width: 100%;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .section-content {
+    padding: 60px var(--aura-spacing-mobile);
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .site-name {
+    font-size: 16px;
+  }
+}
+
+/* ========================================
+   UTILITATS
+   ======================================== */
+
+.text-center {
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--aura-spacing);
+}
+
+/* ========================================
+   HERO VÍDEO INVERTIT (fons negre → blanc)
+   ======================================== */
+
+.aura-video-hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--aura-dark-bg);
+  color: var(--aura-white);
+  min-height: 60vh;
+}
+
+.aura-video-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85; /* conserva detalls dels punts blancs */
+  filter: invert(1) grayscale(1) brightness(1.05) contrast(1.05);
+  mix-blend-mode: normal;
+}
+
+.aura-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  mix-blend-mode: normal;
+}
+
+.aura-video-content {
+  position: relative;
+  z-index: 1;
+  padding: clamp(32px, 6vw, 96px);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Ocultar elements de Ruhi que no volem */
+.slick-slider,
+.slick-container,
+.featured-content,
+[data-drupal-selector*="ruhi"],
+.ruhi-slider,
+.region-hero .block:not([id*="aura"]),
+.region-hero .views-element-container,
+.slider-content-wrapper,
+.slide-content {
+  display: none !important;
+}
+
+/* ========================================
+   BLOC COMHOFEM (vídeo de fons)
+   ======================================== */
+
+.aura-comhofem {
+  position: relative;
+  overflow: hidden;
+  color: var(--aura-white)!important;
+}
+
+.aura-comhofem__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.aura-comhofem__overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.aura-comhofem__inner {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  padding: clamp(32px, 5vw, 72px) clamp(20px, 5vw, 48px) clamp(48px, 6vw, 96px);
+  width: 100%;
+}
+
+.aura-comhofem__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  justify-content: space-between;
+  margin-bottom: clamp(24px, 4vw, 40px);
+  text-align: start;
+}
+
+.aura-comhofem__header h2 {
+  margin: 0 0 8px;
+  font-size: clamp(28px, 3vw, 36px);
+  letter-spacing: -0.01em;
+  color: var(--aura-white);
+}
+
+.aura-comhofem__subtitle {
+  display: inline-flex;
+  margin: 0;
+  font-size: clamp(16px, 2vw, 20px);
+  color: var(--aura-overlay-white);
+  line-height: normal;
+}
+
+.aura-comhofem__cta {
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  color: var(--aura-card) !important;
+  text-decoration: none !important;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.aura-comhofem__cta:hover,
+.aura-comhofem__cta:focus-visible {
+  background: var(--aura-white);
+  color: var(--aura-black) !important;
+  border-color: var(--aura-white);
+}
+
+.aura-comhofem__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.aura-comhofem__item {
+  position: relative;
+  padding: clamp(20px, 3vw, 32px);
+  border-top: 1px solid rgba(255, 255, 255, 0.8);
+  border-right: 1px solid rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  gap: 10px;
+}
+
+.aura-comhofem__item:nth-of-type(4n) {
+  border-right: none;
+}
+
+.aura-comhofem__badge {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.aura-comhofem__item-head {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.aura-comhofem__item-top {
+  display: grid;
+  gap: 6px;
+  flex: 1;
+}
+
+.aura-comhofem__item-title {
+  margin: 0;
+  font-size: clamp(18px, 2vw, 24px);
+  letter-spacing: 0.04em;
+  color: var(--aura-white);
+}
+
+.aura-comhofem__item-lead {
+  margin-top: 0em;
+  font-size: 18px;
+  color: var(--aura-white);
+  line-height: normal;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.aura-comhofem__item:hover {
+  background: rgba(256, 256, 256, 0.95);
+  color: var(--aura-black) !important;
+}
+
+.aura-comhofem__item:hover * {
+  color: var(--aura-black) !important;
+}
+
+.aura-comhofem__item:hover .aura-comhofem__badge {
+  background: var(--aura-white); /* Fons més fosc */
+  border-color: rgba(0, 0, 0, 0.5);
+  color: var(--aura-black); /* Color de la lletra dins el cercle */
+}
+
+.aura-comhofem__item-body {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.aura-comhofem__ghost {
+  display: inline-flex;
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: var(--aura-overlay-light);
+  text-decoration: none !important;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  margin: auto;;
+}
+
+.aura-comhofem__ghost:hover,
+.aura-comhofem__ghost:focus-visible {
+  background: var(--aura-white);
+  color: #0b0b0b;
+  border-color: var(--aura-white);
+}
+
+@media (max-width: 900px) {
+  .aura-comhofem__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .aura-comhofem__cta {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .aura-comhofem__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .aura-comhofem__item:nth-of-type(4n),
+  .aura-comhofem__item:nth-of-type(2n) {
+    border-right: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .aura-comhofem__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .aura-comhofem__item {
+    border-right: none;
+  }
+}
+
+/* Forçar visibilitat del bloc AURA Hero */
+.region-hero [id*="aura"],
+.aura-hero {
+  display: block !important;
+}

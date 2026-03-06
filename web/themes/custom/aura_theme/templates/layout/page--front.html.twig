@@ -1,0 +1,43 @@
+{# Front page override to ensure AURA layout applies on homepage #}
+<div class="page-wrapper">
+  <header class="site-header" role="banner">
+    {{ page.header }}
+    {% if page.primary_menu %}
+      <nav id="primary-navigation" class="primary-navigation" role="navigation">
+        {{ page.primary_menu }}
+      </nav>
+    {% endif %}
+  </header>
+
+  {% if page.hero %}
+    <section class="hero-region">
+      {{ page.hero }}
+    </section>
+  {% endif %}
+
+  <main class="main-content" role="main">
+    <section>
+      {% if page.highlighted %}
+        <div class="highlighted">{{ page.highlighted }}</div>
+      {% endif %}
+
+      {% if page.content_above %}
+        <div class="content-above">{{ page.content_above }}</div>
+      {% endif %}
+
+      <div class="content-wrapper">
+        {{ page.content }}
+      </div>
+
+      {% if page.content_below %}
+        <div class="content-below">{{ page.content_below }}</div>
+      {% endif %}
+    </section>
+  </main>
+
+  {% if page.footer %}
+    <footer class="site-footer" role="contentinfo">
+      {{ page.footer }}
+    </footer>
+  {% endif %}
+</div>

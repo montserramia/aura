@@ -1,0 +1,22 @@
+{#
+  Custom hero region with inverted video background.
+  Shows the theme video (hero.mp4) inverted via CSS; content is overlaid.
+#}
+<section class="section-dark aura-video-hero">
+  <video
+    class="aura-video-bg"
+    src="{{ base_path }}themes/custom/aura_theme/video/hero-1.mp4"
+    poster="{{ base_path }}themes/custom/aura_theme/images/frame_000.png"
+    autoplay
+    muted
+    loop
+    playsinline
+    aria-label="Hero background video">
+  </video>
+  <div class="aura-video-overlay"></div>
+  {% if content %}
+    <div class="aura-video-content">
+      {{ content }}
+    </div>
+  {% endif %}
+</section>

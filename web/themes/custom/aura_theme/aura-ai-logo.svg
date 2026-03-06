@@ -1,0 +1,84 @@
+<svg viewBox="120 100 510 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient suau violeta → blau → gris perla -->
+    <linearGradient id="auraGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B7BA8;stop-opacity:0.4" />
+      <stop offset="50%" style="stop-color:#6B8CAE;stop-opacity:0.35" />
+      <stop offset="100%" style="stop-color:#9BA5B0;stop-opacity:0.3" />
+    </linearGradient>
+    
+    <!-- Ona orgànica interior -->
+    <clipPath id="uClip">
+      <path d="M 260 120 L 260 220 Q 260 280, 310 280 L 330 280 Q 380 280, 380 220 L 380 120" />
+    </clipPath>
+  </defs>
+  
+  <!-- LOGOTIP: només AURA -->
+  <g id="logo">
+    
+    <!-- Lletra A -->
+    <path d="M 140 280 L 180 120 L 220 280 M 160 210 L 200 210" 
+          fill="none" 
+          stroke="#2B2B2B" 
+          stroke-width="8" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+    
+    <!-- Lletra U (contenidor amb energia) -->
+    <g id="u-container">
+      <!-- Traç exterior U -->
+      <path d="M 260 120 L 260 220 Q 260 280, 310 280 L 330 280 Q 380 280, 380 220 L 380 120" 
+            fill="none" 
+            stroke="#2B2B2B" 
+            stroke-width="8" 
+            stroke-linecap="round"/>
+      
+      <!-- Energia interior (ona orgànica amb gradient) -->
+      <g clip-path="url(#uClip)">
+        <path d="M 260 180 Q 290 160, 320 180 T 380 180" 
+              fill="none" 
+              stroke="url(#auraGradient)" 
+              stroke-width="24" 
+              opacity="0.6">
+          <animate 
+            attributeName="d" 
+            values="M 260 180 Q 290 160, 320 180 T 380 180;
+                    M 260 180 Q 290 200, 320 180 T 380 180;
+                    M 260 180 Q 290 160, 320 180 T 380 180"
+            dur="4s" 
+            repeatCount="indefinite"/>
+        </path>
+        
+        <path d="M 260 220 Q 290 200, 320 220 T 380 220" 
+              fill="none" 
+              stroke="url(#auraGradient)" 
+              stroke-width="20" 
+              opacity="0.4">
+          <animate 
+            attributeName="d" 
+            values="M 260 220 Q 290 200, 320 220 T 380 220;
+                    M 260 220 Q 290 240, 320 220 T 380 220;
+                    M 260 220 Q 290 200, 320 220 T 380 220"
+            dur="5s" 
+            repeatCount="indefinite"/>
+        </path>
+      </g>
+    </g>
+    
+    <!-- Lletra R -->
+    <path d="M 420 280 L 420 120 L 460 120 Q 490 120, 490 150 Q 490 180, 460 180 L 420 180 M 455 180 L 490 280" 
+          fill="none" 
+          stroke="#2B2B2B" 
+          stroke-width="8" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+    
+    <!-- Lletra A -->
+    <path d="M 530 280 L 570 120 L 610 280 M 550 210 L 590 210" 
+          fill="none" 
+          stroke="#2B2B2B" 
+          stroke-width="8" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+  </g>
+</svg>

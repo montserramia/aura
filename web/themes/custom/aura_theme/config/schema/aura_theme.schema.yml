@@ -1,0 +1,5 @@
+# Schema for the configuration files of the AURA theme.
+
+aura_theme.settings:
+  type: theme_settings
+  label: 'AURA Theme Settings'

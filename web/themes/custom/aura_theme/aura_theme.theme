@@ -1,0 +1,47 @@
+<?php
+
+/**
+ * @file
+ * Functions to support the AURA theme.
+ */
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function aura_theme_preprocess_html(&$variables) {
+  // Preconnect a Google Fonts per millorar el rendiment
+  $variables['#attached']['html_head'][] = [
+    [
+      '#tag' => 'link',
+      '#attributes' => [
+        'rel' => 'preconnect',
+        'href' => 'https://fonts.googleapis.com',
+      ],
+    ],
+    'google-fonts-preconnect-1',
+  ];
+
+  $variables['#attached']['html_head'][] = [
+    [
+      '#tag' => 'link',
+      '#attributes' => [
+        'rel' => 'preconnect',
+        'href' => 'https://fonts.gstatic.com',
+        'crossorigin' => 'anonymous',
+      ],
+    ],
+    'google-fonts-preconnect-2',
+  ];
+
+  // Path del tema disponible als templates via variable base_path de Twig
+  $variables['base_path'] = base_path();
+  // Usem $active_theme_path disponible per defecte a tots els templates Drupal
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function aura_theme_preprocess_page(array &$variables) {
+  // $active_theme_path ja està disponible a tots els templates via Twig globals
+  // No cal cridar extension.list.theme aquí
+}
