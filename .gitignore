@@ -11,6 +11,20 @@
 !/themes/custom
 /themes/contrib
 
+# Drupal (web/ docroot)
+/web/sites/*/files
+/web/sites/*/private
+/web/core
+/web/profiles/*
+!/web/profiles/README.txt
+/web/modules/*
+!/web/modules/README.txt
+!/web/modules/custom/
+/web/themes/*
+!/web/themes/README.txt
+!/web/themes/custom/
+/web/themes/contrib
+
 # Dependencies
 /vendor
 /node_modules

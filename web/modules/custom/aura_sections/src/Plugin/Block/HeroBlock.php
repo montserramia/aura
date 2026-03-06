@@ -25,8 +25,8 @@ class HeroBlock extends BlockBase {
       'subtitle' => $this->t('Un procés pensat perquè passis de la idea a la pràctica amb seguretat.'),
       'button_text' => $this->t('Parlem-ne amb calma'),
       'button_link' => '#contact',
-      'background_video' => '/themes/custom/aura_theme/videos/hero.mp4',
-      'background_video_poster' => '/themes/custom/aura_theme/images/frame_000.png',
+      'background_video' => '/themes/custom/aura_theme/video/hero-1.mp4',
+      'background_video_poster' => '/themes/custom/aura_theme/images/frame000.png',
     ] + parent::defaultConfiguration();
   }
 
