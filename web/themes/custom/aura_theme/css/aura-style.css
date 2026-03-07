@@ -683,7 +683,7 @@ p {
 }
 
 .aura-comhofem__item:hover {
-  background: rgba(256, 256, 256, 0.95);
+  background: rgba(256, 256, 256, 0.75);
   color: var(--aura-black) !important;
 }
 
