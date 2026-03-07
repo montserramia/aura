@@ -25,3 +25,16 @@ function aura_sections_theme() {
     ],
   ];
 }
+
+/**
+ * Implements hook_theme_suggestions_block_alter().
+ */
+function aura_sections_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  if (isset($variables['elements']['#block']) && $variables['elements']['#block'] instanceof \Drupal\Core\Block\BlockPluginInterface) {
+    $block = $variables['elements']['#block'];
+    $block_id = $block->getPluginId();
+    if ($block_id === 'aura_theme_comhofem') {
+      $suggestions[] = 'block__aura_theme_comhofem';
+    }
+  }
+}

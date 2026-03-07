@@ -11,9 +11,9 @@
 <section class="aura-hero">
   <div class="aura-hero__media">
     {% if background_video %}
-      {% set poster_fallback = background_video_poster|default(base_path ~ 'themes/custom/aura_theme/images/frame_000.png') %}
+      {% set poster_fallback = background_video_poster|default(base_path ~ 'themes/custom/aura_theme/images/frame000.png') %}
       <video class="aura-hero__video" autoplay muted loop playsinline poster="{{ poster_fallback }}">
-        <source src="{{ background_video }}" type="video/mp4">
+        <source src="{{ base_path ~ background_video }}" type="video/mp4">
       </video>
     {% endif %}
   </div>

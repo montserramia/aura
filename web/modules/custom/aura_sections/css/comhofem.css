@@ -1,0 +1,195 @@
+.aura-comhofem {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(40px, 5vw, 80px) clamp(24px, 3vw, 40px);
+  color: #fff;
+}
+
+.region-hero-video .aura-comhofem {
+  display: flex !important;
+}
+
+.aura-comhofem__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aura-comhofem__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.aura-comhofem__inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.aura-comhofem__header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.aura-comhofem__header h2 {
+  font-size: clamp(28px, 4vw, 48px);
+  line-height: 1.2;
+  margin: 0;
+  font-weight: 400;
+}
+
+.aura-comhofem__subtitle {
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.6;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.aura-comhofem__cta {
+  display: inline-block;
+  padding: 14px 32px;
+  border: 1px solid #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+  color: #fff;
+  background: transparent;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.aura-comhofem__cta:hover {
+  background: #fff;
+  color: #000;
+}
+
+.aura-comhofem__grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.aura-comhofem__item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 32px 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.aura-comhofem__item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.aura-comhofem__item-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.aura-comhofem__badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.aura-comhofem__item-top {
+  flex: 1;
+}
+
+.aura-comhofem__item-title {
+  font-size: 18px;
+  line-height: 1.3;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.aura-comhofem__item-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.aura-comhofem__item-lead {
+  font-size: 14px;
+  font-style: italic;
+  opacity: 0.8;
+  margin: 0;
+}
+
+.aura-comhofem__item-body strong {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.aura-comhofem__item-body p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.aura-comhofem__ghost {
+  display: inline-block;
+  padding: 10px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.aura-comhofem__ghost:hover {
+  border-color: #fff;
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .aura-comhofem__header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .aura-comhofem__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+}
