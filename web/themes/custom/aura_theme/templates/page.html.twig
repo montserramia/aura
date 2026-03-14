@@ -30,7 +30,9 @@
   <main class="main-content" role="main">
     <section>
       {% if page.highlighted %}
-        <div class="highlighted">{{ page.highlighted }}</div>
+        <div class="highlighted region-highlighted">
+          {{ page.highlighted }}
+        </div>
       {% endif %}
       {% if page.content_above %}
         <div class="content-above">{{ page.content_above }}</div>

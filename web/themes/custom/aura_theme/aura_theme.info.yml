@@ -5,7 +5,7 @@ core_version_requirement: ^10 || ^11
 base theme: stable9
 
 libraries:
-  - aura_theme/ubuntu-fonts
+  - aura_theme/bitter-fonts
   - aura_theme/global-styling
 
 regions:

@@ -34,13 +34,13 @@ html {
 }
 
 body {
-  font-family: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-  color: #f5f5f5;
+  font-family: 'Bitter', serif;
+  /* color: #f5f5f5; */
   background-color: var(--aura-dark-bg);
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  font-weight: 400; /* Regular */
+  font-weight: 300; /* Regular */
   letter-spacing: 0.5px;
 }
 
@@ -230,7 +230,7 @@ a.cta-button {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Bitter', serif;
   font-weight: 700; /* Bold — transmet seguretat i claredat */
   line-height: 1.2;
   margin-top: 0;
@@ -392,6 +392,49 @@ p {
   height: 2px;
   background: var(--aura-black);
   transition: 0.3s;
+}
+
+/* ========================================
+   ARTICLES
+   ======================================== */
+
+.aura-connection {
+  background: #f0f7ff;
+  border-left: 4px solid var(--aura-dark-bg);
+  padding: 1rem;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+
+.cta-aura {
+  background: #fafafa;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.cta-buttons .btn {
+  margin: 0.5rem;
+  display: inline-block;
+}
+
+table.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+table.table th,
+table.table td {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table.table th {
+  background: #f5f5f5;
+  font-weight: 600;
 }
 
 /* ========================================
@@ -759,4 +802,620 @@ p {
 .region-hero [id*="aura"],
 .aura-hero {
   display: block !important;
+}
+
+/* ========================================
+   ARTICLES - Disseny minimalista "pàgina de paper"
+   ======================================== */
+
+/* Contenidor principal de l'article */
+.node-article {
+  background: var(--aura-overlay-light);
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin: 40px auto;
+  padding: 60px 80px;
+}
+
+@media (max-width: 900px) {
+  .node-article {
+    padding: 40px 40px;
+    margin: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .node-article {
+    padding: 30px 20px;
+    margin: 10px;
+  }
+}
+
+/* Header de l'article */
+.article-header {
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 30px;
+}
+
+/* Metadades: autor i data */
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: var(--aura-gray);
+}
+
+.article-meta-details {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.author-name,
+.publish-date {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.author-name i,
+.publish-date i {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* Títol de l'article */
+.article-title {
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 100;
+  line-height: 1.3;
+  color: var(--aura-black);
+  margin: 24px 0 16px;
+  letter-spacing: -0.02em;
+}
+
+.article-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.article-title a:hover {
+  color: var(--aura-gray);
+}
+
+/* Tags/Categories */
+.article-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.tag-link {
+  display: inline-block;
+  padding: 4px 12px;
+  background: var(--aura-light-bg);
+  color: var(--aura-gray);
+  font-size: 13px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.tag-link:hover {
+  background: var(--aura-black);
+  color: var(--aura-white);
+}
+
+/* Cos de l'article */
+.article-content {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--aura-text);
+}
+
+.article-content p {
+  margin-bottom: 24px;
+}
+
+.article-content h2 {
+  font-size: 28px;
+  margin: 40px 0 20px;
+  font-weight: 200;
+}
+
+.article-content h3 {
+  font-size: 22px;
+  margin: 32px 0 16px;
+  font-weight: 200;
+}
+
+.article-content h4 {
+  font-size: 18px;
+  margin: 24px 0 12px;
+  font-weight: 200;
+}
+
+.article-content ul,
+.article-content ol {
+  margin: 20px 0;
+  padding-left: 24px;
+}
+
+.article-content li {
+  margin-bottom: 12px;
+}
+
+.article-content blockquote {
+  border-left: 3px solid var(--aura-black);
+  padding-left: 20px;
+  margin: 30px 0;
+  font-style: italic;
+  color: var(--aura-gray);
+}
+
+.article-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 24px auto;
+  border-radius: 2px;
+}
+
+.article-content a {
+  color: var(--aura-gray);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.article-content a:hover {
+  color: var(--aura-black);
+}
+
+/* Peu de l'article */
+.article-footer {
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Secció Compartir */
+.article-share {
+  margin-bottom: 40px;
+}
+
+.share-title {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--aura-gray);
+  margin-bottom: 16px;
+  font-weight: 200;
+}
+
+.share-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.share-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--aura-border);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--aura-gray);
+}
+
+.share-btn:hover {
+  background: var(--aura-black);
+  color: var(--aura-white);
+  border-color: var(--aura-black);
+}
+
+.share-facebook:hover {
+  background: #1877F2;
+  border-color: #1877F2;
+  color: white;
+}
+
+.share-x:hover {
+  background: #000;
+  border-color: #000;
+  color: white;
+}
+
+.share-linkedin:hover {
+  background: #0077B5;
+  border-color: #0077B5;
+  color: white;
+}
+
+.share-link:hover {
+  background: var(--aura-gray);
+  border-color: var(--aura-gray);
+  color: white;
+}
+
+.share-print:hover {
+  background: var(--aura-text);
+  border-color: var(--aura-text);
+  color: white;
+}
+
+/* Secció Estadístiques */
+.article-stats {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  padding: 20px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--aura-gray);
+  font-size: 14px;
+}
+
+.stat-item svg {
+  opacity: 0.7;
+}
+
+.stat-count {
+  font-weight: 200;
+  color: var(--aura-black);
+}
+
+.stat-label {
+  opacity: 0.8;
+}
+
+/* Botó Like animat */
+.like-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--aura-gray);
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.like-btn:hover {
+  background: rgba(232, 74, 67, 0.1);
+}
+
+.like-btn.active .like-icon {
+  animation: likeAnimation 0.5s ease;
+  fill: #E84A43;
+}
+
+.like-btn.active {
+  color: #E84A43;
+}
+
+@keyframes likeAnimation {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.3);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Articles relacionats */
+.related-articles {
+  margin-bottom: 40px;
+}
+
+.related-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.related-title {
+  font-size: 18px;
+  font-weight: 200;
+  color: var(--aura-black);
+}
+
+.related-all {
+  font-size: 14px;
+  color: var(--aura-gray);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.related-all:hover {
+  color: var(--aura-black);
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .related-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .related-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Comentaris */
+.article-comments {
+  margin-top: 40px;
+}
+
+.comments-title {
+  font-size: 18px;
+  font-weight: 200;
+  color: var(--aura-black);
+  margin-bottom: 24px;
+}
+
+.comment-form-wrapper input[type="text"],
+.comment-form-wrapper input[type="email"],
+.comment-form-wrapper textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--aura-border);
+  border-radius: 2px;
+  font-family: 'Bitter', serif;
+  font-size: 16px;
+  margin-bottom: 16px;
+  transition: border-color 0.2s ease;
+}
+
+.comment-form-wrapper input[type="text"]:focus,
+.comment-form-wrapper input[type="email"]:focus,
+.comment-form-wrapper textarea:focus {
+  outline: none;
+  border-color: var(--aura-black);
+}
+
+.comment-form-wrapper textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.comment-form-wrapper button[type="submit"] {
+  background: var(--aura-black);
+  color: var(--aura-white);
+  border: none;
+  padding: 12px 32px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.comment-form-wrapper button[type="submit"]:hover {
+  background: var(--aura-gray);
+}
+
+/* Responsive per estadístiques */
+@media (max-width: 600px) {
+  .article-stats {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .share-buttons {
+    justify-content: center;
+  }
+}
+
+/* ========================================
+   PESTANYES D'ADMINISTRACIÓ DRUPAL
+   ======================================== */
+
+/* Forçar display flex als UL dins de highlighted - EXCLOENT contextuals */
+.region-highlighted ul:not(.contextual-links),
+.highlighted ul:not(.contextual-links),
+.region-highlighted > div > ul:not(.contextual-links),
+.highlighted > div > ul:not(.contextual-links) {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 4px;
+  list-style: none !important;
+  padding: 0;
+  margin: 20px 0;
+  border-bottom: 2px solid var(--aura-border);
+}
+
+.region-highlighted li:not(.contextual-links li),
+.highlighted li:not(.contextual-links li) {
+  margin: 0;
+  display: inline-block;
+}
+
+.region-highlighted a:not(.contextual-links a),
+.highlighted a:not(.contextual-links a) {
+  display: inline-block !important;
+  padding: 10px 20px !important;
+  background: var(--aura-light-bg) !important;
+  color: var(--aura-gray) !important;
+  text-decoration: none !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  border: 1px solid var(--aura-border) !important;
+  border-bottom: none !important;
+  border-radius: 4px 4px 0 0 !important;
+  transition: all 0.2s ease !important;
+}
+
+.region-highlighted a:not(.contextual-links a):hover,
+.highlighted a:not(.contextual-links a):hover {
+  background: var(--aura-border) !important;
+  color: var(--aura-black) !important;
+}
+
+.region-highlighted li.is-active a:not(.contextual-links a),
+.highlighted li.is-active a:not(.contextual-links a),
+.region-highlighted .is-active a:not(.contextual-links a),
+.highlighted .is-active a:not(.contextual-links a) {
+  background: var(--aura-black) !important;
+  color: var(--aura-white) !important;
+  border-color: var(--aura-black) !important;
+}
+
+/* Pestanyes secundàries amb estil diferent */
+.region-highlighted ul:not(.contextual-links) + ul:not(.contextual-links),
+.highlighted ul:not(.contextual-links) + ul:not(.contextual-links) {
+  margin-top: 0;
+  border-bottom: none !important;
+  gap: 8px !important;
+}
+
+.region-highlighted ul:not(.contextual-links) + ul:not(.contextual-links) a,
+.highlighted ul:not(.contextual-links) + ul:not(.contextual-links) a {
+  background: transparent !important;
+  border: 1px solid var(--aura-border) !important;
+  border-radius: 4px !important;
+  padding: 8px 16px !important;
+  font-size: 13px !important;
+}
+
+.region-highlighted ul:not(.contextual-links) + ul:not(.contextual-links) a:hover,
+.highlighted ul:not(.contextual-links) + ul:not(.contextual-links) a:hover,
+.region-highlighted ul:not(.contextual-links) + ul:not(.contextual-links) li.is-active a,
+.highlighted ul:not(.contextual-links) + ul:not(.contextual-links) li.is-active a {
+  background: var(--aura-black) !important;
+  color: var(--aura-white) !important;
+  border-color: var(--aura-black) !important;
+}
+
+/* Enllaços d'acció (action links) */
+ul.action-links {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.action-links li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.action-links a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--aura-black);
+  color: var(--aura-white);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.action-links a:hover {
+  background: var(--aura-gray);
+}
+
+.action-links a::before {
+  content: "+";
+  margin-right: 6px;
+  font-weight: bold;
+}
+
+/* Contenidor de les pestanyes a les pàgines */
+.region-highlighted {
+  background: var(--aura-overlay-light);
+  padding: 20px;
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+/* Amagar highlighted quan només té elements .hidden */
+.region-highlighted:empty,
+.highlighted:empty {
+  display: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+}
+
+/* Amagar quan l'únic fill és .hidden o està buit */
+.region-highlighted > *:only-child.hidden,
+.highlighted > *:only-child.hidden {
+  display: none !important;
+}
+
+.region-highlighted:has(> *:only-child.hidden),
+.highlighted:has(> *:only-child.hidden) {
+  display: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+}
+
+/* Fallback per navegadors sense :has() */
+.region-highlighted > .hidden:only-child,
+.highlighted > .hidden:only-child {
+  display: none !important;
+}
+
+.region-highlighted > .hidden:only-child ~ *,
+.highlighted > .hidden:only-child ~ * {
+  display: none !important;
+}
+
+/* Responsive per pestanyes */
+@media (max-width: 600px) {
+  .region-highlighted ul:not(.contextual-links),
+  .highlighted ul:not(.contextual-links) {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+
+  .region-highlighted a:not(.contextual-links a),
+  .highlighted a:not(.contextual-links a) {
+    display: block !important;
+    border-radius: 4px !important;
+    border-bottom: 1px solid var(--aura-border) !important;
+  }
+
+  .region-highlighted li.is-active a:not(.contextual-links a),
+  .highlighted li.is-active a:not(.contextual-links a) {
+    border-bottom: 1px solid var(--aura-black) !important;
+  }
 }
