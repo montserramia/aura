@@ -149,7 +149,7 @@ body {
 }
 
 #primary-navigation a:hover,
-#primary-navigation a.is-active {
+#primary-navigation a:focus-visible {
   background-color: #5C5B5E !important;
   color: #ffffff !important;
   border-color: #5C5B5E !important;
@@ -166,12 +166,11 @@ a.cta-button {
   display: inline-block;
   padding: 12px 30px;
   background: transparent;
-  color: var(--aura-text);
-  text-decoration: none;
+  color: var(--aura-text) !important;
+  text-decoration: none !important;
   border: 1px solid var(--aura-border);
-  text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 12px;
+  text-transform: uppercase;
   font-weight: 500;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -180,7 +179,7 @@ a.cta-button {
 .btn:hover,
 .cta-button:hover {
   background: var(--aura-black);
-  color: var(--aura-white);
+  color: var(--aura-white) !important;
   border-color: var(--aura-black);
 }
 
@@ -231,14 +230,14 @@ a.cta-button {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Bitter', serif;
-  font-weight: 700; /* Bold — transmet seguretat i claredat */
+  font-weight: 400; /* Bold — transmet seguretat i claredat */
   line-height: 1.2;
   margin-top: 0;
 }
 
 .hero-content h1 {
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.2;
   margin-bottom: 20px;
   color: var(--aura-black);
@@ -1247,7 +1246,7 @@ table.table th {
    PESTANYES D'ADMINISTRACIÓ DRUPAL
    ======================================== */
 
-/* Forçar display flex als UL dins de highlighted - EXCLOENT contextuals */
+/* Forçar display flex als UL dins de highlighted - EXCLOENT contextuals i nodes */
 .region-highlighted ul:not(.contextual-links),
 .highlighted ul:not(.contextual-links),
 .region-highlighted > div > ul:not(.contextual-links),
@@ -1261,14 +1260,33 @@ table.table th {
   border-bottom: 2px solid var(--aura-border);
 }
 
-.region-highlighted li:not(.contextual-links li),
-.highlighted li:not(.contextual-links li) {
+/* Excloure explícitament enllaços dins de nodes i contextuals */
+.region-highlighted .node a,
+.highlighted .node a,
+.region-highlighted [data-contextual-id] a,
+.highlighted [data-contextual-id] a,
+.region-highlighted .contextual a,
+.highlighted .contextual a {
+  display: inherit !important;
+  padding: inherit !important;
+  background: inherit !important;
+  color: inherit !important;
+  text-decoration: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  border: inherit !important;
+  border-radius: inherit !important;
+  transition: inherit !important;
+}
+
+.region-highlighted li:not(.contextual-links li):not(.node li),
+.highlighted li:not(.contextual-links li):not(.node li) {
   margin: 0;
   display: inline-block;
 }
 
-.region-highlighted a:not(.contextual-links a),
-.highlighted a:not(.contextual-links a) {
+.region-highlighted a:not(.contextual-links a):not(.node a):not([data-contextual-id] a):not(.contextual a),
+.highlighted a:not(.contextual-links a):not(.node a):not([data-contextual-id] a):not(.contextual a) {
   display: inline-block !important;
   padding: 10px 20px !important;
   background: var(--aura-light-bg) !important;
@@ -1282,16 +1300,16 @@ table.table th {
   transition: all 0.2s ease !important;
 }
 
-.region-highlighted a:not(.contextual-links a):hover,
-.highlighted a:not(.contextual-links a):hover {
+.region-highlighted a:not(.contextual-links a):not(.node a):not([data-contextual-id] a):not(.contextual a):hover,
+.highlighted a:not(.contextual-links a):not(.node a):not([data-contextual-id] a):not(.contextual a):hover {
   background: var(--aura-border) !important;
   color: var(--aura-black) !important;
 }
 
-.region-highlighted li.is-active a:not(.contextual-links a),
-.highlighted li.is-active a:not(.contextual-links a),
-.region-highlighted .is-active a:not(.contextual-links a),
-.highlighted .is-active a:not(.contextual-links a) {
+.region-highlighted li.is-active a:not(.contextual-links a):not(.node a):not([data-contextual-id] a):not(.contextual a),
+.highlighted li.is-active a:not(.contextual-links a):not(.node a):not([data-contextual-id] a):not(.contextual a),
+.region-highlighted .is-active a:not(.contextual-links a):not(.node a):not([data-contextual-id] a):not(.contextual a),
+.highlighted .is-active a:not(.contextual-links a):not(.node a):not([data-contextual-id] a):not(.contextual a) {
   background: var(--aura-black) !important;
   color: var(--aura-white) !important;
   border-color: var(--aura-black) !important;
@@ -1417,5 +1435,161 @@ ul.action-links {
   .region-highlighted li.is-active a:not(.contextual-links a),
   .highlighted li.is-active a:not(.contextual-links a) {
     border-bottom: 1px solid var(--aura-black) !important;
+  }
+}
+
+/* ========================================
+   ARTICLES TEASER (Resum) - Vista de llista
+   ======================================== */
+
+.node-article-teaser {
+  background: var(--aura-overlay-light);
+  border-radius: 2px;
+  padding: 34px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+}
+
+.node-article-teaser:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Meta: data i temps de lectura */
+.article-teaser-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--aura-gray);
+  margin-bottom: 10px;
+}
+
+.article-teaser-separator {
+  opacity: 0.5;
+}
+
+.article-teaser-readtime {
+  font-weight: 500;
+}
+
+/* Títol amb alçada fixa */
+.article-teaser-title {
+  font-size: 22px;
+  line-height: 1.4;
+  font-weight: 400;
+  color: var(--aura-black);
+  margin: 10px 0;
+  /* Alçada fixa per 3 línies */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 150px; /* 22px * 1.4 * 3 línies */
+}
+
+.article-teaser-title a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.article-teaser-title a:hover {
+  color: var(--aura-gray);
+}
+
+/* Peu: comentaris i compartir */
+.article-teaser-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.article-teaser-comments {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--aura-gray);
+}
+
+.article-teaser-comments svg {
+  opacity: 0.7;
+}
+
+.comment-count {
+  font-weight: 600;
+  color: var(--aura-black);
+}
+
+/* Botó de compartir (3 punts) */
+.article-teaser-share {
+  position: relative;
+}
+
+.share-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: var(--aura-gray);
+  transition: color 0.2s ease;
+}
+
+.share-toggle:hover {
+  color: var(--aura-black);
+}
+
+.share-options {
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  background: var(--aura-white);
+  border: 1px solid var(--aura-border);
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+  min-width: 120px;
+  z-index: 10;
+}
+
+.share-options[hidden] {
+  display: none;
+}
+
+.share-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--aura-gray);
+  text-align: left;
+  transition: background 0.2s ease;
+}
+
+.share-option:hover {
+  background: var(--aura-light-bg);
+  color: var(--aura-black);
+}
+
+/* Responsive per teaser */
+@media (max-width: 768px) {
+  .node-article-teaser {
+    padding: 24px;
+  }
+
+  .article-teaser-title {
+    font-size: 20px;
+    min-height: 100px;
   }
 }

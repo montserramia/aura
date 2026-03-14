@@ -22,7 +22,63 @@
           region.style.setProperty('height', '0', 'important');
           region.style.setProperty('margin', '0', 'important');
           region.style.setProperty('padding', '0', 'important');
+          
+          // També amagar el contenidor pare (.highlighted)
+          const parentHighlighted = region.closest('.highlighted');
+          if (parentHighlighted && parentHighlighted !== region) {
+            parentHighlighted.style.setProperty('display', 'none', 'important');
+            parentHighlighted.style.setProperty('visibility', 'hidden', 'important');
+            parentHighlighted.style.setProperty('height', '0', 'important');
+            parentHighlighted.style.setProperty('margin', '0', 'important');
+            parentHighlighted.style.setProperty('padding', '0', 'important');
+          }
         }
+      });
+    }
+  };
+
+  // Comportament per al botó de compartir als teasers
+  Drupal.behaviors.auraTeaserShare = {
+    attach: function (context, settings) {
+      const shareToggles = context.querySelectorAll('.share-toggle');
+      
+      shareToggles.forEach(function(toggle) {
+        toggle.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const shareOptions = this.nextElementSibling;
+          const isExpanded = this.getAttribute('aria-expanded') === 'true';
+          
+          // Tancar tots els altres
+          document.querySelectorAll('.share-options').forEach(function(opt) {
+            if (opt !== shareOptions) {
+              opt.setAttribute('hidden', '');
+            }
+          });
+          document.querySelectorAll('.share-toggle').forEach(function(t) {
+            if (t !== this) {
+              t.setAttribute('aria-expanded', 'false');
+            }
+          });
+          
+          // Toggle actual
+          if (isExpanded) {
+            shareOptions.setAttribute('hidden', '');
+            this.setAttribute('aria-expanded', 'false');
+          } else {
+            shareOptions.removeAttribute('hidden');
+            this.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+      
+      // Tancar menús en clicar fora
+      document.addEventListener('click', function() {
+        document.querySelectorAll('.share-options').forEach(function(opt) {
+          opt.setAttribute('hidden', '');
+        });
+        document.querySelectorAll('.share-toggle').forEach(function(toggle) {
+          toggle.setAttribute('aria-expanded', 'false');
+        });
       });
     }
   };
