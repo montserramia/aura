@@ -14,9 +14,8 @@
     {# Fila 1: Logo #}
     <div class="footer-branding-row">
       <a href="{{ path('<front>') }}" class="footer-logo">
-        <img src="{{ base_path ~ directory }}/ona-logo.svg" alt="AURA AI" width="80" height="80">
-      </a>
-      <p class="footer-site-name">AURA AI</p>
+        <img src="{{ base_path ~ directory }}/aura-ai-logo-light.svg" alt="AURA AI" width="80">
+      </a> <span class="footer-site-name">Consultoria d'Intel·ligència Artificial</span>
     </div>
 
     {# Fila 2: 3 Columnes #}
@@ -26,11 +25,11 @@
         <h3 class="footer-heading">MENU</h3>
         <nav class="footer-nav" role="navigation">
           <ul class="footer-links">
-            <li><a href="{{ path('<front>') }}">Home</a></li>
-            <li><a href="{{ path('<front>') }}#about">About</a></li>
-            <li><a href="{{ path('<front>') }}#services">Services</a></li>
-            <li><a href="{{ path('<front>') }}#resources">Resources</a></li>
-            <li><a href="{{ path('<front>') }}#contact">Contact</a></li>
+            <li><a href="{{ path('<front>') }}">Inici</a></li>
+            <li><a href="{{ path('<front>') }}#about">Sobre nosaltres</a></li>
+            <li><a href="{{ path('<front>') }}#services">Serveis</a></li>
+            <li><a href="{{ path('/blog') }}#resources">Recursos</a></li>
+            <li><a href="{{ path('/contacte') }}#contact">Contacte</a></li>
           </ul>
         </nav>
       </div>
@@ -39,10 +38,10 @@
       <div class="footer-column footer-contact">
         <h3 class="footer-heading">CONTACT</h3>
         <address class="footer-address">
-          <p>500 Terry Francine Street,</p>
-          <p>San Francisco, CA 94158</p>
-          <p>Mail: <a href="mailto:info@mysite.com">info@mysite.com</a></p>
-          <p>Tel: 123-456-7890</p>
+          <p>Avinguda Constiució 197,</p>
+          <p>Castelldefels, BCN 08860</p>
+          <p>Mail: <a href="mailto:hola@aura-ia.eu">hola@aura-ia.eu</a></p>
+          <p>Tel: 674 93 33 94</p>
         </address>
       </div>
 
@@ -58,9 +57,7 @@
 
     {# Fila 3: Copyright #}
     <div class="footer-bottom-row">
-      <p class="footer-copyright">
         © {{ "now"|date("Y") }} by AURA AI.
-      </p>
     </div>
   </div>
 </div>
