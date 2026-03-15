@@ -1,13 +1,66 @@
-{% if page.footer %}
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-container">
-        {{ page.footer }}
+{#
+/**
+ * @file
+ * Template per al footer del tema AURA
+ * 
+ * Estructura:
+ * - Fila 1: Logo + AURA AI
+ * - Fila 2: 3 columnes (Menu / Contacte / Legal)
+ * - Fila 3: Copyright
+ */
+#}
+<div class="footer-wrapper">
+  <div class="footer-content">
+    {# Fila 1: Logo #}
+    <div class="footer-branding-row">
+      <a href="{{ path('<front>') }}" class="footer-logo">
+        <img src="{{ base_path ~ directory }}/ona-logo.svg" alt="AURA AI" width="80" height="80">
+      </a>
+      <p class="footer-site-name">AURA AI</p>
+    </div>
+
+    {# Fila 2: 3 Columnes #}
+    <div class="footer-columns-row">
+      {# Columna 1: Menu #}
+      <div class="footer-column footer-menu">
+        <h3 class="footer-heading">MENU</h3>
+        <nav class="footer-nav" role="navigation">
+          <ul class="footer-links">
+            <li><a href="{{ path('<front>') }}">Home</a></li>
+            <li><a href="{{ path('<front>') }}#about">About</a></li>
+            <li><a href="{{ path('<front>') }}#services">Services</a></li>
+            <li><a href="{{ path('<front>') }}#resources">Resources</a></li>
+            <li><a href="{{ path('<front>') }}#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      {# Columna 2: Contacte #}
+      <div class="footer-column footer-contact">
+        <h3 class="footer-heading">CONTACT</h3>
+        <address class="footer-address">
+          <p>500 Terry Francine Street,</p>
+          <p>San Francisco, CA 94158</p>
+          <p>Mail: <a href="mailto:info@mysite.com">info@mysite.com</a></p>
+          <p>Tel: 123-456-7890</p>
+        </address>
+      </div>
+
+      {# Columna 3: Legal #}
+      <div class="footer-column footer-legal">
+        <h3 class="footer-heading">LEGAL</h3>
+        <ul class="footer-legal-links">
+          <li><a href="{{ path('<front>') }}privacy-policy">Privacy Policy</a></li>
+          <li><a href="{{ path('<front>') }}accessibility-statement">Accessibility Statement</a></li>
+        </ul>
       </div>
     </div>
-  </footer>
-{% endif %}
 
-{% if scrolltotop_on %}
-  <div class="scrolltop"><i class="icon-arrow-up"></i></div>
-{% endif %}
+    {# Fila 3: Copyright #}
+    <div class="footer-bottom-row">
+      <p class="footer-copyright">
+        © {{ "now"|date("Y") }} by AURA AI.
+      </p>
+    </div>
+  </div>
+</div>

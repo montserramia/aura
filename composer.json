@@ -26,7 +26,8 @@
         "drupal/metatag": "^2.2",
         "drupal/pathauto": "^1.13",
         "drupal/redirect": "^1.11",
-        "drupal/schema_metatag": "^3.0"
+        "drupal/schema_metatag": "^3.0",
+        "drupal/webform": "^6.3@beta"
     },
     "conflict": {
         "drupal/drupal": "*"

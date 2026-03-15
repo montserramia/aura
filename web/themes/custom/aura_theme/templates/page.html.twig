@@ -44,12 +44,12 @@
         <div class="content-below">{{ page.content_below }}</div>
       {% endif %}
     </section>
-  </main>
 
-  {% if page.footer %}
-    <footer class="site-footer" role="contentinfo">
-      {{ page.footer }}
-    </footer>
-  {% endif %}
+    {# Footer sempre visible #}
+    <div class="site-footer" role="contentinfo">
+      {% include '@aura_theme/template-parts/footer.html.twig' %}
+    </div>
+    
+  </main>
 
 </div>

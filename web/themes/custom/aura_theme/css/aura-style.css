@@ -12,6 +12,7 @@
   --aura-light-gray: #E5E5E5;
   --aura-border: #D1D1D1;
   --aura-light-bg: #E6E5EB ;  /* Athens gray */
+  --aura-dark-gray: #5d5b5e;
   
   /* Overlays semi-transparents */
   --aura-overlay-white: rgba(255, 255, 255, 0.95);
@@ -34,7 +35,7 @@ html {
 }
 
 body {
-  font-family: 'Bitter', serif;
+  font-family: 'Space Grotesk', sans-serif;
   /* color: #f5f5f5; */
   background-color: var(--aura-dark-bg);
   margin: 0;
@@ -132,7 +133,7 @@ body {
   letter-spacing: 0.15em;
   font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-weight: 400;
-  color: #5C5B5E;
+  color: var(--aura-dark-gray);
   text-decoration: none;
   padding: 2px;
   text-align: end;
@@ -360,15 +361,180 @@ p {
 }
 
 /* ========================================
-   FOOTER - Amb overlay
+   FOOTER - Estil Wix (fons clar com main-content)
    ======================================== */
 
 .site-footer {
-  background: var(--aura-overlay-white);
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
-  padding: 60px var(--aura-spacing);
-  color: var(--aura-text);
+  background: var(--aura-dark-gray);
+  color: var(--aura-white);
+  padding: 0;
+  margin: 0.6em;
   position: relative;
+}
+
+/* Wrapper per padding intern */
+.footer-wrapper {
+  padding: 40px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Fila 1: Logo */
+.footer-branding-row {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #282828;
+}
+
+.footer-logo {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.footer-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: none;
+}
+
+.footer-site-name {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #282828;
+  margin: 10px 0 0;
+}
+
+/* Fila 2: 3 Columnes (Menu / Contacte / Legal) */
+.footer-columns-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #282828;
+}
+
+@media (max-width: 768px) {
+  .footer-columns-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-columns-row {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+/* Columnes */
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Títols de columna */
+.footer-heading {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #282828;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* Enllaços */
+.footer-links,
+.footer-legal-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links a,
+.footer-legal-links a {
+  color: rgba(40, 40, 40, 0.7);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover,
+.footer-legal-links a:hover {
+  color: #282828;
+}
+
+/* Adreça de contacte */
+.footer-address {
+  font-style: normal;
+  color: rgba(40, 40, 40, 0.7);
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.footer-address a {
+  color: rgba(40, 40, 40, 0.7);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-address a:hover {
+  color: #282828;
+}
+
+/* Fila 3: Copyright */
+.footer-bottom-row {
+  padding-top: 30px;
+  text-align: center;
+}
+
+.footer-copyright {
+  color: rgba(40, 40, 40, 0.5);
+  font-size: 13px;
+  margin: 0;
+}
+
+.footer-copyright a {
+  color: rgba(40, 40, 40, 0.5);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.footer-copyright a:hover {
+  color: #282828;
+}
+
+/* Responsive per footer */
+@media (max-width: 600px) {
+  .site-footer {
+    margin: 0.6em 0.6em 0.6em;
+  }
+
+  .footer-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .footer-branding-row,
+  .footer-columns-row {
+    text-align: center;
+  }
+
+  .footer-column {
+    align-items: center;
+  }
 }
 
 /* ========================================
@@ -1196,7 +1362,7 @@ table.table th {
   padding: 12px 16px;
   border: 1px solid var(--aura-border);
   border-radius: 2px;
-  font-family: 'Bitter', serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 16px;
   margin-bottom: 16px;
   transition: border-color 0.2s ease;
@@ -1377,7 +1543,6 @@ ul.action-links {
 
 /* Contenidor de les pestanyes a les pàgines */
 .region-highlighted {
-  background: var(--aura-overlay-light);
   padding: 20px;
   border-radius: 4px;
   margin: 20px 0;

@@ -8,6 +8,17 @@ global-styling:
     js/smooth-scroll.js: {}
     js/hide-empty-highlighted.js: {}
 
+space-grotesk-fonts:
+  css:
+    theme:
+      https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap:
+        type: external
+        minified: true
+        preprocess: false
+        browsers:
+          IE: false
+          '!IE': true
+
 bitter-fonts:
   css:
     theme:
