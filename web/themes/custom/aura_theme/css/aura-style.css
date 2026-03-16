@@ -282,6 +282,34 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
+/* ========================================
+   BANNER REGION - Full width amb fons clar
+   ======================================== */
+
+.banner-region {
+  background: var(--aura-overlay-light);
+  width: 100%;
+  padding: 40px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.banner-region > * {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+@media (max-width: 768px) {
+  .banner-region {
+    padding: 30px 0;
+  }
+
+  .banner-region > * {
+    padding: 0 20px;
+  }
+}
+
 /* Seccions fosques (sense overlay) */
 .section-dark,
 .section-content.dark {
@@ -385,7 +413,6 @@ p {
 /* Fila 1: Logo */
 .footer-branding-row {
   padding: 30px;
-  border-bottom: 0.5px solid #FFFFFF;
 }
 
 .footer-logo {
@@ -436,10 +463,12 @@ p {
   flex-direction: column;
   gap: 15px;
   padding: 30px;
-  border: 0.5px solid var(--aura-white);
+  border-top: 0.5px solid var(--aura-white);
+  border-right: 0.5px solid var(--aura-white);
+  border-bottom: 0.5px solid var(--aura-white);
   justify-content: space-between;
   min-height: 300px;
-  padding: 20px;
+  padding: 30px;
 }
 
 /* Títols de columna */
@@ -530,6 +559,85 @@ p {
 
   .footer-column {
     align-items: center;
+  }
+}
+
+/* ========================================
+   PÀGINA DE CONTACTE - Webform
+   ======================================== */
+
+.resize-vertical {
+  min-height: 2em;
+  resize: vertical;
+  border: 0;
+  border-radius: 5px;
+}
+.contacte-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 80vh;
+}
+
+.contacte-layout__image {
+  background-color: #d4e8e4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contacte-layout__image img {
+  max-width: 80%;
+}
+
+.contacte-layout__form {
+  padding: 3rem;
+}
+
+/* Camps interiors del webform: 2 columnes = 25% cadascun */
+.contacte-layout__form .two-col-row {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.contacte-layout__form .two-col-row .form-item {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Missatge i botó: amplada completa */
+.contacte-layout__form .form-item--missatge,
+.contacte-layout__form .webform-button--submit {
+  width: 100%;
+}
+
+.webform-submission-form .webform-button--submit {
+  background-color: #3a3a3a;
+  color: #ffffff;
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.webform-submission-form .webform-button--submit:hover {
+  background-color: #1a1a1a;
+}
+
+@media (max-width: 768px) {
+  .contacte-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .contacte-layout__image {
+    min-height: 300px;
+  }
+
+  .contacte-layout__form .two-col-row {
+    flex-direction: column;
   }
 }
 
@@ -1646,9 +1754,10 @@ ul.action-links {
   /* Alçada fixa per 3 línies */
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  min-height: 150px; /* 22px * 1.4 * 3 línies */
+  min-height: 180px; /* 22px * 1.4 * 3 línies */
 }
 
 .article-teaser-title a {

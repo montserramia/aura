@@ -25,18 +25,18 @@
         <h3 class="footer-heading">MENU</h3>
         <nav class="footer-nav" role="navigation">
           <ul class="footer-links">
-            <li><a href="{{ path('<front>') }}">Inici</a></li>
-            <li><a href="{{ path('<front>') }}#about">Sobre nosaltres</a></li>
-            <li><a href="{{ path('<front>') }}#services">Serveis</a></li>
-            <li><a href="{{ path('/blog') }}#resources">Recursos</a></li>
-            <li><a href="{{ path('/contacte') }}#contact">Contacte</a></li>
+            <li><a href="/">Inici</a></li>
+            <li><a href="/#about">Sobre nosaltres</a></li>
+            <li><a href="/#services">Serveis</a></li>
+            <li><a href="/blog">Recursos</a></li>
+            <li><a href="/contacte">Contacte</a></li>
           </ul>
         </nav>
       </div>
 
       {# Columna 2: Contacte #}
       <div class="footer-column footer-contact">
-        <h3 class="footer-heading">CONTACT</h3>
+        <h3 class="footer-heading">CONTACTE</h3>
         <address class="footer-address">
           <p>Avinguda Constiució 197,</p>
           <p>Castelldefels, BCN 08860</p>
@@ -49,15 +49,17 @@
       <div class="footer-column footer-legal">
         <h3 class="footer-heading">LEGAL</h3>
         <ul class="footer-legal-links">
-          <li><a href="{{ path('<front>') }}privacy-policy">Privacy Policy</a></li>
-          <li><a href="{{ path('<front>') }}accessibility-statement">Accessibility Statement</a></li>
+          <li><a href="/privacy-policy">Política de Privacitat</a></li>
+          <li><a href="/accessibilitat">Declaració d'accessibilitat</a></li>
         </ul>
       </div>
     </div>
 
     {# Fila 3: Copyright #}
     <div class="footer-bottom-row">
-        © {{ "now"|date("Y") }} by AURA AI.
+      <span class="footer-copyright">
+        © {{ "now"|date("Y") }} by AURA AI. | Desenvolupat i mantingut per <a href="https://newwweb.cat/" target="_blank" rel="noopener">newWweb</a>
+      </span>
     </div>
   </div>
 </div>

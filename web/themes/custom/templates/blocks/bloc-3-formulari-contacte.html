@@ -5,60 +5,28 @@
     <!-- COLUMNA ESQUERRA: Informació -->
     <div class="aura-column aura-column--white">
         <span class="aura-label">REACH OUT</span>
-        
+
         <h2>Let's talk - schedule a free consultation</h2>
-        
+
         <h3>Get ahead of AI today</h3>
-        
-        <!-- Utilitzar els botons existents del tema si hi són, sinó aquest és un exemple -->
-        <a href="/contact" class="button">CONTACT US</a>
-    </div>
-    
-    <!-- COLUMNA DRETA: Formulari (integra el webform de Drupal aquí) -->
-    <div class="aura-column aura-column--light aura-column--centered">
-        <!-- Opció 1: Inserir aquí el webform de Drupal -->
-        <!-- {{ drupal_entity('webform', 'contact') }} -->
-        
-        <!-- Opció 2: Art ASCII o imatge decorativa -->
-        <div class="aura-image-wrapper">
-            <img src="/themes/custom/aura_theme/images/ascii-pattern.svg" alt="Pattern" />
+
+        <p class="aura-text">
+            Contacta'ns per a una consulta gratuïta sobre com la IA pot transformar el teu negoci.
+        </p>
+
+        <!-- Informació de contacte -->
+        <div class="aura-contact-info">
+            <p><strong>Email:</strong> hola@aura-ia.eu</p>
+            <p><strong>Tel:</strong> 674 93 33 94</p>
         </div>
+    </div>
+
+    <!-- COLUMNA DRETA: Webform de Drupal -->
+    <div class="aura-column aura-column--light aura-column--centered">
+        {# El webform es renderitza automàticament si el bloc està a la regió content #}
+        {# Aquest espai es reserva per al webform #}
         
-        <!-- Opció 3: Formulari HTML estàtic d'exemple -->
-        <!--
-        <form class="aura-form">
-            <div class="aura-form-group">
-                <label class="aura-form-label" for="first-name">FIRST NAME *</label>
-                <input type="text" id="first-name" name="first_name" class="aura-form-input" required>
-            </div>
-            
-            <div class="aura-form-group">
-                <label class="aura-form-label" for="last-name">LAST NAME *</label>
-                <input type="text" id="last-name" name="last_name" class="aura-form-input" required>
-            </div>
-            
-            <div class="aura-form-group">
-                <label class="aura-form-label" for="email">EMAIL *</label>
-                <input type="email" id="email" name="email" class="aura-form-input" required>
-            </div>
-            
-            <div class="aura-form-group">
-                <label class="aura-form-label" for="phone">PHONE</label>
-                <input type="tel" id="phone" name="phone" class="aura-form-input">
-            </div>
-            
-            <div class="aura-form-group">
-                <label class="aura-form-label" for="company">COMPANY</label>
-                <input type="text" id="company" name="company" class="aura-form-input">
-            </div>
-            
-            <div class="aura-form-group">
-                <label class="aura-form-label" for="message">MESSAGE *</label>
-                <textarea id="message" name="message" class="aura-form-textarea" required></textarea>
-            </div>
-            
-            <button type="submit" class="aura-form-submit">SUBMIT</button>
-        </form>
-        -->
+        <!-- Pattern decoratiu de fons -->
+        <div class="aura-pattern-bg"></div>
     </div>
 </div>

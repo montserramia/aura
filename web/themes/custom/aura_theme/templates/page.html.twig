@@ -27,6 +27,13 @@
     </section>
   {% endif %}
 
+  {# Banner full width #}
+  {% if page.banner %}
+    <section class="banner-region">
+      {{ page.banner }}
+    </section>
+  {% endif %}
+
   <main class="main-content" role="main">
     <section>
       {% if page.highlighted %}

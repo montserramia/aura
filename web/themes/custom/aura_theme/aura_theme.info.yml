@@ -15,7 +15,7 @@ regions:
   secondary_menu: 'Secondary menu'
   breadcrumb: 'Breadcrumb'
   hero: 'Hero'
-  hero_video: 'Hero vídeo'
+  banner: 'Banner (full width)'
   highlighted: 'Highlighted'
   content_above: 'Content Above'
   content: 'Content'

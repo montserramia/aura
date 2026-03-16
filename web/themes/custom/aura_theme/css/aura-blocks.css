@@ -79,6 +79,10 @@
   background-color: var(--aura-white);
 }
 
+.aura-column--lavanda {
+  background-color: #F6EBFB;
+}
+
 .aura-column--dark {
   background-color: var(--aura-dark-bg);
   color: var(--aura-white);
@@ -86,6 +90,10 @@
 
 .aura-column--transparent {
   background-color: transparent;
+}
+
+.region region-content-below {
+  padding: 0.6em;
 }
 
 /* ========================================
