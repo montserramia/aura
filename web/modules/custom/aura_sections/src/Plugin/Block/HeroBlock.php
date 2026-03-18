@@ -26,8 +26,7 @@ class HeroBlock extends BlockBase {
       'button_text' => $this->t('Parlem-ne amb calma'),
       'button_link' => '#contact',
       'background_video' => '/themes/custom/aura_theme/video/hero-1.webm',
-      'background_video_poster' => '/themes/custom/aura_theme/images/      {% set poster_fallback = background_video_poster|default(base_path ~ 'themes/custom/aura_theme/images/20260318182325.png') %}
-.png',
+      'background_video_poster' => '/themes/custom/aura_theme/images/20260318182325.png',
     ] + parent::defaultConfiguration();
   }
 
@@ -66,7 +65,7 @@ class HeroBlock extends BlockBase {
 
     $form['background_video'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Vídeo de fons (MP4)'),
+      '#title' => $this->t('Vídeo de fons (WEBM)'),
       '#default_value' => $config['background_video'],
     ];
 
