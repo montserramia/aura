@@ -124,7 +124,7 @@ body {
 
 #primary-navigation ul > li {
   margin: 0;
-  padding: 0 50px;
+  padding: 0 40px;
 }
 
 #primary-navigation a {
@@ -146,7 +146,7 @@ body {
   justify-content: flex-end;
   direction: ltr;
   flex-grow: 1;
-  width: calc(100% + 8em);
+  width: calc(100% + 7em);
 }
 
 #primary-navigation a:hover,
@@ -852,7 +852,7 @@ body.menu-open .site-header {
 }
 
 /* Mostrar hamburger a mòbil */
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .mobile-menu-toggle {
     display: flex;
   }
