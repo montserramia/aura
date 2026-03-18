@@ -191,13 +191,13 @@ a.cta-button {
 .main-content {
   background: var(--aura-overlay-light);
   position: relative;
-  padding-bottom: 0.6em;
+  padding-bottom: 4em;
 }
 
 .main-content > section {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 80px var(--aura-spacing);
+  padding: 10px var(--aura-spacing);
 }
 
 /* Full-width per blocs que han de sortir del contenidor */
@@ -208,7 +208,8 @@ a.cta-button {
 }
 
 .content-wrapper {
-  padding: 0 5%;
+  padding: 2em 5%;
+  margin: 1em 0;
 }
 
 .page-wrapper {
@@ -1082,7 +1083,7 @@ table.table th {
   background: var(--aura-overlay-light);
   border-radius: 2px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  margin: 40px auto;
+  margin: auto;
   padding: 60px 80px;
 }
 
@@ -1177,7 +1178,7 @@ table.table th {
 
 .tag-link:hover {
   background: var(--aura-black);
-  color: var(--aura-white);
+  color: var(--aura-overlay-light) !important;
 }
 
 /* Cos de l'article */
@@ -1257,8 +1258,9 @@ table.table th {
   margin-bottom: 40px;
 }
 
+.comments-title,
 .share-title {
-  font-size: 14px;
+  font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--aura-gray);
@@ -1373,11 +1375,13 @@ table.table th {
   background: rgba(232, 74, 67, 0.1);
 }
 
+.like-btn.is-liked .like-icon,
 .like-btn.active .like-icon {
   animation: likeAnimation 0.5s ease;
   fill: #E84A43;
 }
 
+.like-btn.is-liked,
 .like-btn.active {
   color: #E84A43;
 }
@@ -1452,36 +1456,146 @@ table.table th {
   margin-top: 40px;
 }
 
-.comments-title {
-  font-size: 18px;
-  font-weight: 200;
+.comment-title {
+  font-size: 14px;
   color: var(--aura-black);
-  margin-bottom: 24px;
+  margin: 0;
 }
 
-.comment-form-wrapper input[type="text"],
-.comment-form-wrapper input[type="email"],
-.comment-form-wrapper textarea {
+h3 .comment-title {
+  margin: 0;
+}
+
+.article-comments .comment-body ul.links.inline {
+  display: none;
+}
+
+.comment-meta p{
+  font-size: 12px;
+  color: var(--aura-gray);
+  margin: 0;
+}
+
+
+.comment-toggle-link {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 16px;
+  color: var(--aura-black);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 500;
+}
+
+.comment-toggle-link:hover,
+.comment-toggle-link:focus {
+  color: var(--aura-gray);
+}
+
+.article-comments .comment-form-wrapper form.comment-form.is-collapsed,
+.article-comments .comment-form-wrapper form[id*="comment-form"].is-collapsed {
+  display: none;
+}
+
+.article-comments .comment-form-wrapper > section > h2 {
+  display: none;
+}
+
+.comment-links-wrapper .comment-add,
+.comment-links-wrapper .comment_forbidden {
+  display: none;
+}
+
+/* Inputs globals per a tota la web */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+textarea {
   width: 100%;
+  height: 3em;
   padding: 12px 16px;
-  border: 1px solid var(--aura-border);
-  border-radius: 2px;
+  border: 1px solid #e7e6eb;
+  border-radius: 5px;
   font-family: 'Space Grotesk', sans-serif;
   font-size: 16px;
-  margin-bottom: 16px;
-  transition: border-color 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.comment-form-wrapper input[type="text"]:focus,
-.comment-form-wrapper input[type="email"]:focus,
-.comment-form-wrapper textarea:focus {
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+textarea:focus {
   outline: none;
   border-color: var(--aura-black);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-.comment-form-wrapper textarea {
+textarea {
   min-height: 120px;
+  height: auto;
   resize: vertical;
+}
+
+/* ========================================
+   FORMULARIS GLOBALS (Drupal form-items)
+   ======================================== */
+
+.form-item {
+  margin-bottom: 1.5em;
+}
+
+.form-item label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: 500;
+  color: var(--aura-black);
+}
+
+.form-item input[type="text"],
+.form-item input[type="email"],
+.form-item input[type="password"],
+.form-item input[type="tel"],
+.form-item input[type="url"],
+.form-item input[type="search"],
+.form-item textarea {
+  margin-bottom: 0;
+}
+
+.form-item input[type="submit"],
+.form-item button[type="submit"],
+input[type="submit"],
+button[type="submit"] {
+  background: var(--aura-black);
+  color: var(--aura-white);
+  border: none;
+  padding: 12px 32px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  border-radius: 5px;
+  margin-top: 0.5em;
+}
+
+.form-item input[type="submit"]:hover,
+.form-item button[type="submit"]:hover,
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+  background: var(--aura-gray);
+}
+
+/* Espai entre content-wrapper i content-below */
+.content-wrapper + .content-below,
+.content-below {
+  margin-top: 2em;
 }
 
 .comment-form-wrapper button[type="submit"] {
@@ -1526,7 +1640,7 @@ table.table th {
   gap: 4px;
   list-style: none !important;
   padding: 0;
-  margin: 20px 0;
+  margin: 8px 0;
   border-bottom: 2px solid var(--aura-border);
 }
 
@@ -1647,9 +1761,9 @@ ul.action-links {
 
 /* Contenidor de les pestanyes a les pàgines */
 .region-highlighted {
-  padding: 20px;
+  padding: 8px 0;
   border-radius: 4px;
-  margin: 20px 0;
+  margin: 8px 0;
 }
 
 /* Amagar highlighted quan només té elements .hidden */
@@ -1713,17 +1827,18 @@ ul.action-links {
 
 .node-article-teaser {
   background: var(--aura-overlay-light);
-  border-radius: 2px;
+  border-radius: 5px;
   padding: 34px;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .node-article-teaser:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
 }
 
 /* Meta: data i temps de lectura */

@@ -8,6 +8,15 @@ global-styling:
     js/smooth-scroll.js: {}
     js/hide-empty-highlighted.js: {}
 
+article-stats:
+  version: 1.x
+  js:
+    js/article-stats.js: {}
+    js/comment-form-toggle.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
+
 space-grotesk-fonts:
   css:
     theme:

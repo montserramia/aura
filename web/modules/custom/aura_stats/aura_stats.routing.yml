@@ -1,0 +1,17 @@
+aura_stats.track_view:
+  path: '/aura/track-view/{nid}'
+  defaults:
+    _controller: '\Drupal\aura_stats\Controller\StatsController::trackView'
+    _format: json
+  requirements:
+    _access: 'TRUE'
+  methods: [POST]
+
+aura_stats.track_like:
+  path: '/aura/track-like/{nid}'
+  defaults:
+    _controller: '\Drupal\aura_stats\Controller\StatsController::trackLike'
+    _format: json
+  requirements:
+    _access: 'TRUE'
+  methods: [POST]

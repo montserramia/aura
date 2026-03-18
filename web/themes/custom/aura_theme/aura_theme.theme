@@ -14,21 +14,121 @@ function aura_theme_preprocess_node(&$variables) {
     // Calcular temps relatiu
     $timestamp = $variables['node']->getCreatedTime();
     $variables['relative_date'] = _aura_theme_time_ago($timestamp);
-    
+
     // Calcular temps de lectura (aprox. 200 paraules per minut)
     $body_text = $variables['node']->get('body')->getValue()[0]['value'] ?? '';
     $word_count = str_word_count(strip_tags($body_text));
     $variables['reading_time'] = max(1, ceil($word_count / 200));
-    
+
     // Comptar comentaris aprovats
     $nid = $variables['node']->id();
-    $query = \Drupal::database()->select('comment_field_data', 'c');
-    $query->addField('c', 'cid', 'count');
-    $query->condition('c.entity_id', $nid);
-    $query->condition('c.entity_type', 'node');
-    $query->condition('c.status', 1);
-    $comment_count = $query->countQuery()->execute()->fetchField();
-    $variables['comment_count'] = (int) $comment_count;
+    $variables['comment_count'] = _aura_get_comment_count($nid);
+  }
+
+  // Variables per al node complet d'articles
+  if ($variables['view_mode'] === 'full' && $variables['node']->bundle() === 'article') {
+    $nid = $variables['node']->id();
+
+    // Comptar visualitzacions
+    $variables['view_count'] = _aura_get_view_count($nid);
+
+    // Comptar comentaris
+    $variables['comment_count'] = _aura_get_comment_count($nid);
+
+    // Comptar m'agrades
+    $variables['like_count'] = _aura_get_like_count($nid);
+
+    // Carregar biblioteca per estadístiques i interaccions
+    $variables['#attached']['library'][] = 'aura_theme/article-stats';
+
+    // Passar el node ID al JavaScript
+    $variables['#attached']['drupalSettings']['articleStats']['nid'] = $nid;
+  }
+}
+
+/**
+ * Get view count for a node.
+ */
+function _aura_get_view_count($nid) {
+  try {
+    $database = \Drupal::database();
+    if (!$database->schema()->tableExists('node_counter')) {
+      return 0;
+    }
+    
+    $result = $database->query(
+      'SELECT totalcount FROM {node_counter} WHERE nid = :nid',
+      [':nid' => $nid]
+    )->fetchField();
+    
+    return (int) ($result ?: 0);
+  }
+  catch (\Exception $e) {
+    return 0;
+  }
+}
+
+/**
+ * Get comment count for a node.
+ */
+function _aura_get_comment_count($nid) {
+  try {
+    $database = \Drupal::database();
+    if (!$database->schema()->tableExists('comment_field_data')) {
+      return 0;
+    }
+    
+    $result = $database->query(
+      'SELECT COUNT(cid) FROM {comment_field_data} WHERE entity_id = :nid AND entity_type = :entity_type AND status = :status',
+      [
+        ':nid' => $nid,
+        ':entity_type' => 'node',
+        ':status' => 1,
+      ]
+    )->fetchField();
+    
+    return (int) $result;
+  }
+  catch (\Exception $e) {
+    return 0;
+  }
+}
+
+/**
+ * Get like count for a node.
+ */
+function _aura_get_like_count($nid) {
+  try {
+    $database = \Drupal::database();
+    
+    // Check flag_content table
+    if ($database->schema()->tableExists('flag_content')) {
+      $result = $database->query(
+        'SELECT COUNT(fcid) FROM {flag_content} WHERE fid = :fid AND entity_id = :nid AND entity_type = :entity_type',
+        [
+          ':fid' => 1,
+          ':nid' => $nid,
+          ':entity_type' => 'node',
+        ]
+      )->fetchField();
+      
+      return (int) $result;
+    }
+    
+    // Check custom aura_stats_likes table
+    if ($database->schema()->tableExists('aura_stats_likes')) {
+      $result = $database->query(
+        'SELECT like_count FROM {aura_stats_likes} WHERE nid = :nid',
+        [':nid' => $nid]
+      )->fetchField();
+      
+      return (int) ($result ?: 0);
+    }
+    
+    return 0;
+  }
+  catch (\Exception $e) {
+    return 0;
   }
 }
 
@@ -37,36 +137,36 @@ function aura_theme_preprocess_node(&$variables) {
  */
 function _aura_theme_time_ago($timestamp) {
   $diff = time() - $timestamp;
-  
+
   if ($diff < 60) {
     return t('fa uns segons');
   }
-  
+
   $minutes = floor($diff / 60);
   if ($minutes < 60) {
     return t('fa @min min', ['@min' => $minutes]);
   }
-  
+
   $hours = floor($diff / 3600);
   if ($hours < 24) {
     return t('fa @h h', ['@h' => $hours]);
   }
-  
+
   $days = floor($diff / 86400);
   if ($days < 7) {
     return t('fa @d dies', ['@d' => $days]);
   }
-  
+
   $weeks = floor($diff / 604800);
   if ($weeks < 4) {
     return t('fa @w setmanes', ['@w' => $weeks]);
   }
-  
+
   $months = floor($diff / 2592000);
   if ($months < 12) {
     return t('fa @m mesos', ['@m' => $months]);
   }
-  
+
   $years = floor($diff / 31536000);
   return t('fa @y any', ['@y' => $years]);
 }
@@ -99,9 +199,7 @@ function aura_theme_preprocess_html(&$variables) {
     'google-fonts-preconnect-2',
   ];
 
-  // Path del tema disponible als templates via variable base_path de Twig
   $variables['base_path'] = base_path();
-  // Usem $active_theme_path disponible per defecte a tots els templates Drupal
 }
 
 /**
@@ -109,5 +207,4 @@ function aura_theme_preprocess_html(&$variables) {
  */
 function aura_theme_preprocess_page(array &$variables) {
   // $active_theme_path ja està disponible a tots els templates via Twig globals
-  // No cal cridar extension.list.theme aquí
 }

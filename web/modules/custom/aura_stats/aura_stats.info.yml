@@ -1,0 +1,8 @@
+name: Aura Stats
+description: Tracks article statistics (views, likes) for Aura theme.
+package: Aura
+type: module
+core_version_requirement: ^9 || ^10 || ^11
+dependencies:
+  - drupal:node
+  - drupal:comment
