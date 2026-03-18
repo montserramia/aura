@@ -249,7 +249,8 @@ display:
             type: none
             fail: 'not found'
           validate_options: {  }
-          exclude: true 
+          exception_value: all
+          not: true
           break_phrase: false
           add_table: false
           require_value: false
@@ -320,7 +321,7 @@ display:
           value:
             min: ''
             max: ''
-            value: current
+            value: ''
           group: 1
           exposed: false
           expose:
@@ -382,7 +383,7 @@ display:
           group_type: group
           admin_label: 'field_tags: Terme de taxonomia'
           plugin_id: standard
-          required: true
+          required: false
       header: {  }
       footer: {  }
       display_extenders: {  }

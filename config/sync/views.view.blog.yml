@@ -403,7 +403,7 @@ display:
         options:
           uses_fields: false
           columns: 3
-          cell_min_width: 100
+          cell_min_width: 260
           grid_gutter: 10
           alignment: horizontal
       row:
@@ -476,7 +476,7 @@ display:
         options:
           uses_fields: false
           columns: 3
-          cell_min_width: 100
+          cell_min_width: 260
           grid_gutter: 10
           alignment: horizontal
       row:

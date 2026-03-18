@@ -9,15 +9,31 @@
 
   Drupal.behaviors.auraSmoothScroll = {
     attach: function (context, settings) {
-      // Seleccionar tots els enllaços del primary navigation amb anchor (#)
-      const menuLinks = context.querySelectorAll('#primary-navigation a[href^="#"]');
+      // Seleccionar enllaços del menú que apunten a una secció de la mateixa pàgina.
+      const menuLinks = context.querySelectorAll('#primary-navigation a[href*="#"]');
       
       menuLinks.forEach(function(link) {
         link.addEventListener('click', function(e) {
+          const rawHref = this.getAttribute('href');
+
+          if (!rawHref || rawHref.indexOf('#') === -1) {
+            return;
+          }
+
+          const currentUrl = new URL(window.location.href);
+          const linkUrl = new URL(rawHref, window.location.origin);
+
+          // Només fem scroll suau si el link apunta a la pàgina actual.
+          if (linkUrl.pathname !== currentUrl.pathname) {
+            return;
+          }
+
+          const targetId = linkUrl.hash;
+          if (!targetId) {
+            return;
+          }
+
           e.preventDefault();
-          
-          // Obtenir l'ID del destí
-          const targetId = this.getAttribute('href');
           const targetElement = document.querySelector(targetId);
           
           if (targetElement) {

@@ -13,10 +13,33 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0;
-  /* margin: 0 calc(var(--aura-spacing) * -1);
-  Expandir fins als marges de .section-content */
   padding: 0 0 10px;
   position: relative;
+}
+
+@media (max-width: 900px) {
+  .aura-two-column {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .aura-two-column {
+    grid-template-columns: 1fr;
+    margin: 0 calc(var(--aura-spacing-mobile) * -1);
+  }
+  
+  /* Ajustar marges a mòbil */
+  .region-content,
+  .region-content-below,
+  #block-aura-theme-quepotferaura {
+    padding: 0px 20px;
+  }
+
+  .webform-flex--container {
+    margin-top: 1.5em;
+  }
+  
 }
 
 .aura-tag {
@@ -228,46 +251,73 @@
    FORMULARIS - Integració amb estils del tema
    ======================================== */
 
-.aura-form-group {
+/* Estils globals per a webforms (qualsevol context) */
+.webform-submission-form,
+.webform-element {
   margin-bottom: 20px;
+  width: 100%;
 }
 
-.aura-form-label {
+.webform-element label {
   display: block;
-  font-size: 10px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   margin-bottom: 8px;
   color: var(--aura-text);
   font-weight: 600;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
-.aura-form-input,
-.aura-form-textarea,
-.aura-form-select {
+.webform-element input[type="text"],
+.webform-element input[type="email"],
+.webform-element input[type="tel"],
+.webform-element input[type="url"],
+.webform-element input[type="password"],
+.webform-element textarea,
+.webform-element select {
   width: 100%;
   padding: 12px 15px;
   border: 1px solid var(--aura-border);
   background-color: var(--aura-white);
   font-size: 14px;
-  font-family: inherit;
+  font-family: 'Space Grotesk', sans-serif;
   color: var(--aura-text);
   transition: border-color 0.3s ease;
+  border-radius: 2px;
 }
 
-.aura-form-input:focus,
-.aura-form-textarea:focus,
-.aura-form-select:focus {
+.webform-element input:focus,
+.webform-element textarea:focus,
+.webform-element select:focus {
   outline: none;
   border-color: var(--aura-black);
 }
 
-.aura-form-textarea {
+.webform-element textarea {
   min-height: 120px;
   resize: vertical;
 }
 
-.aura-form-submit {
+.webform-element .form-required::after {
+  content: '*';
+  color: red;
+  margin-left: 4px;
+}
+
+.webform-element .description {
+  font-size: 12px;
+  color: var(--aura-gray);
+  margin-top: 5px;
+}
+
+.webform-actions {
+  margin-top: 30px;
+}
+
+.webform-submit,
+.webform-button--submit,
+input[type="submit"].webform-submit {
   width: 100%;
   padding: 15px;
   background-color: var(--aura-black);
@@ -279,11 +329,60 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
-.aura-form-submit:hover {
+.webform-submit:hover,
+.webform-button--submit:hover,
+input[type="submit"].webform-submit:hover {
   background-color: transparent;
   color: var(--aura-black);
+}
+
+/* Estils específics quan el webform està dins d'una columna aura */
+.aura-column .webform-submission-form,
+.aura-column .webform-element {
+  width: 100%;
+  max-width: 100%;
+}
+
+.aura-column .webform-element label {
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.aura-column .webform-element input[type="text"],
+.aura-column .webform-element input[type="email"],
+.aura-column .webform-element input[type="tel"],
+.aura-column .webform-element textarea {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.aura-column .webform-element textarea {
+  min-height: 100px;
+}
+
+.aura-column .webform-submit,
+.aura-column .webform-button--submit {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+/* Webform fora de columnes (pàgina d'inici) */
+.region-content-below .webform-submission-form,
+.view .webform-submission-form,
+#block-aura-theme-quepotferaura .webform-submission-form {
+  max-width: 100%;
+}
+
+.region-content-below .webform-element,
+.view .webform-element,
+#block-aura-theme-quepotferaura .webform-element {
+  margin-bottom: 20px;
 }
 
 /* ========================================
@@ -295,8 +394,86 @@
   .aura-image-wrapper svg {
     max-width: 90%;
   }
-  
+
   .aura-testimonial blockquote {
     font-size: 18px;
+  }
+}
+
+/* ========================================
+   CONTACTE - Responsive específic per webform
+   ======================================== */
+
+/* A mòbil, la columna amb el pattern va primer */
+@media (max-width: 768px) {
+  .aura-two-column {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .aura-column--light {
+    min-height: 250px;
+    padding: 30px 20px;
+  }
+
+  .aura-column--white {
+    padding: 30px 20px;
+  }
+}
+
+/* Webform dins de la columna */
+.aura-column .webform-submission-form,
+.aura-column .webform-element {
+  width: 100%;
+  max-width: 100%;
+}
+
+.aura-column .webform-element label {
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.aura-column .webform-element input[type="text"],
+.aura-column .webform-element input[type="email"],
+.aura-column .webform-element input[type="tel"],
+.aura-column .webform-element textarea {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.aura-column .webform-element textarea {
+  min-height: 100px;
+}
+
+.aura-column .webform-submit,
+.aura-column .webform-button--submit {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+/* Ajustos per a mòbils molt petits */
+@media (max-width: 480px) {
+  .aura-column {
+    padding: 20px 15px;
+    min-height: auto;
+  }
+
+  .aura-column--light {
+    min-height: 200px;
+  }
+
+  .aura-column .webform-element input,
+  .aura-column .webform-element textarea {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  .aura-column .webform-submit,
+  .aura-column .webform-button--submit {
+    padding: 10px 15px;
+    font-size: 11px;
   }
 }

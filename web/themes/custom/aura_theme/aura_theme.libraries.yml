@@ -7,6 +7,11 @@ global-styling:
   js:
     js/smooth-scroll.js: {}
     js/hide-empty-highlighted.js: {}
+    js/mobile-menu.js: {}
+    js/scroll-to-top.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
 
 article-stats:
   version: 1.x
