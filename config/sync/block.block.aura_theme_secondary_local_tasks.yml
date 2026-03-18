@@ -1,0 +1,22 @@
+uuid: e7ec52cb-b565-4bdd-ba92-8841bf59fcbb
+langcode: ca
+status: true
+dependencies:
+  theme:
+    - aura_theme
+_core:
+  default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
+id: aura_theme_secondary_local_tasks
+theme: aura_theme
+region: highlighted
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Pestanyes secundàries'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

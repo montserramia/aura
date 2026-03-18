@@ -1,0 +1,27 @@
+uuid: e0941ecb-2015-4d56-909d-192e277b4127
+langcode: ca
+status: true
+dependencies:
+  config:
+    - filter.format.restricted_html
+  module:
+    - comment
+    - contact
+    - eu_cookie_compliance
+    - filter
+    - search
+    - system
+_core:
+  default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
+id: anonymous
+label: 'Usuari anònim'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'display eu cookie compliance popup'
+  - 'post comments'
+  - 'search content'
+  - 'use text format restricted_html'

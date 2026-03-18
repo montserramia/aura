@@ -1,0 +1,22 @@
+uuid: 673c0902-9308-4404-829c-799632ad701f
+langcode: ca
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - aura_theme
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: aura_theme_content
+theme: aura_theme
+region: content
+weight: -8
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Contingut principal de la pàgina'
+  label_display: '0'
+  provider: system
+visibility: {  }

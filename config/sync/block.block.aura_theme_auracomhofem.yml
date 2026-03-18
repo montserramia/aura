@@ -1,0 +1,25 @@
+uuid: f85c5a17-6d6d-428b-92cb-7c06af97cd0c
+langcode: ca
+status: true
+dependencies:
+  module:
+    - aura_sections
+    - system
+  theme:
+    - aura_theme
+id: aura_theme_auracomhofem
+theme: aura_theme
+region: content_above
+weight: -7
+provider: null
+plugin: aura_theme_comhofem
+settings:
+  id: aura_theme_comhofem
+  label: 'AURA Com ho fem'
+  label_display: '0'
+  provider: aura_sections
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

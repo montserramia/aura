@@ -1,0 +1,10 @@
+uuid: 831b8bf3-aad8-48b3-a415-1f58e7977234
+langcode: ca
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: M_Bh81osDyUQ4wV0GgU_NdBNqkzM87sLxjaCdFj9mnw
+id: account
+label: "Menú del compte d'usuari"
+description: "Enllaços relacionats amb el compte d'usuari actiu"
+locked: true

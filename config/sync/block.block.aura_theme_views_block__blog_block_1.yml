@@ -1,0 +1,29 @@
+uuid: 9cd18865-df01-4570-a485-24875d1a3cfa
+langcode: ca
+status: true
+dependencies:
+  config:
+    - views.view.blog
+  module:
+    - system
+    - views
+  theme:
+    - aura_theme
+id: aura_theme_views_block__blog_block_1
+theme: aura_theme
+region: content
+weight: -7
+provider: null
+plugin: 'views_block:blog-block_1'
+settings:
+  id: 'views_block:blog-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

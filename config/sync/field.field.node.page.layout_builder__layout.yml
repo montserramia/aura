@@ -1,0 +1,21 @@
+uuid: 4d86557b-3bb7-4222-803c-0dda0104b056
+langcode: ca
+status: true
+dependencies:
+  config:
+    - field.storage.node.layout_builder__layout
+    - node.type.page
+  module:
+    - layout_builder
+id: node.page.layout_builder__layout
+field_name: layout_builder__layout
+entity_type: node
+bundle: page
+label: Disposició
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: layout_section

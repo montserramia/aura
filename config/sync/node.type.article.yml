@@ -1,0 +1,22 @@
+uuid: 654de24a-126f-420c-9992-8c4d6b1f7d2c
+langcode: ca
+status: true
+dependencies:
+  module:
+    - comment
+third_party_settings:
+  comment:
+    comment_node_article:
+      status: 2
+      preview: 1
+      form_location: full
+      default: 0
+_core:
+  default_config_hash: Fe3N1uqaAyyKJbVkqT-btXy3t98puW8GCRD822xjl10
+name: Article
+type: article
+description: 'Utilitzeu els <em>articles</em> per a contingut sensible en el temps com notícies, comunicats de premsa o entrades de blog.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

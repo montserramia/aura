@@ -1,0 +1,23 @@
+uuid: 05570e49-cf44-411e-bfdd-331a1adb9c35
+langcode: ca
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - aura_theme
+_core:
+  default_config_hash: pbbed0hdqGDF-_QWVVTWRAwgDIotFuAvWH5mWUZu0fA
+id: aura_theme_search_form_wide
+theme: aura_theme
+region: secondary_menu
+weight: -5
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Formulari de cerca (ample)'
+  label_display: '0'
+  provider: search
+  page_id: null
+visibility: {  }

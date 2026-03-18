@@ -1,0 +1,10 @@
+uuid: e7484a58-2788-4f01-aa99-8e710c1a3ae2
+langcode: ca
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: SAeixlV7Djy_Ggv_1P95TiqD4KUihA5icvU521tA84Y
+id: short
+label: 'Format predeterminat per a la data curta'
+locked: false
+pattern: 'j M Y - H:i'

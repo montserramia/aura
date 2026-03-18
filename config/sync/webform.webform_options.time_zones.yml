@@ -1,0 +1,14 @@
+uuid: bc3d02e0-d471-4125-9e78-4566784706ba
+langcode: ca
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+_core:
+  default_config_hash: 8rVcRXLnTAEoWs7zl8du-7RIUnayqUcGYnvb3JT21-o
+id: time_zones
+label: 'Fusos horaris'
+category: 'Data i hora'
+likert: false
+options: ''

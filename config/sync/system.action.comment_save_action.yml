@@ -1,0 +1,13 @@
+uuid: 805f4cbf-d2bc-4ffa-9836-05dfb121b04b
+langcode: ca
+status: true
+dependencies:
+  module:
+    - comment
+_core:
+  default_config_hash: lfyE_snmvfg_EQ3VDyhUtGAXgmqtEiqa46I3bTMg8DU
+id: comment_save_action
+label: 'Desa el comentari'
+type: comment
+plugin: 'entity:save_action:comment'
+configuration: {  }

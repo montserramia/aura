@@ -1,0 +1,31 @@
+uuid: 74f64433-f928-4ee3-87c5-d04236e2dcdf
+langcode: ca
+status: true
+dependencies:
+  module:
+    - aura_sections
+    - system
+  theme:
+    - aura_theme
+id: aura_theme_auraherosection
+theme: aura_theme
+region: hero
+weight: -7
+provider: null
+plugin: aura_hero_block
+settings:
+  id: aura_hero_block
+  label: 'AURA Hero Section'
+  label_display: '0'
+  provider: aura_sections
+  title: 'Com tu, volem que la IA sigui fidel als teus propòsits'
+  subtitle: "Un procés pensat per transformar les teves idees en solucions reals, pas a pas.\r\n\r\n"
+  button_text: Parlem-ne
+  button_link: '#contact'
+  background_video: /themes/custom/aura_theme/video/hero-1.mp4
+  background_video_poster: /themes/custom/aura_theme/images/frame_000.png
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

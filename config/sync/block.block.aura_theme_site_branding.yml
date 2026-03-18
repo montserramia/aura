@@ -1,0 +1,25 @@
+uuid: 120c70e7-6499-4ef4-a37a-342e29855f4d
+langcode: ca
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - aura_theme
+_core:
+  default_config_hash: '-OAAZDw1OR_UyAEPEKX0Hu4LaZD149vW9PmMnIC-v0o'
+id: aura_theme_site_branding
+theme: aura_theme
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Marca del lloc'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

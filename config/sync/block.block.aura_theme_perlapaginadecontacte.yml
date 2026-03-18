@@ -1,0 +1,23 @@
+uuid: bf268b9b-20f2-4fd1-a8cc-ad41057ea2be
+langcode: ca
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:923d558c-48de-4f44-b2cf-fa207756d4f1'
+  module:
+    - block_content
+  theme:
+    - aura_theme
+id: aura_theme_perlapaginadecontacte
+theme: aura_theme
+region: content_below
+weight: -7
+provider: null
+plugin: 'block_content:923d558c-48de-4f44-b2cf-fa207756d4f1'
+settings:
+  id: 'block_content:923d558c-48de-4f44-b2cf-fa207756d4f1'
+  label: 'Per la pàgina de contacte'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

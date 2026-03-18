@@ -1,0 +1,28 @@
+uuid: b66d58a5-4f7f-4cc9-aff1-d4ccb049b217
+langcode: ca
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:ad7c223f-c730-49b4-960f-e7dc979f8a52'
+  module:
+    - block_content
+    - system
+  theme:
+    - aura_theme
+id: aura_theme_quepotferaura
+theme: aura_theme
+region: hero
+weight: -6
+provider: null
+plugin: 'block_content:ad7c223f-c730-49b4-960f-e7dc979f8a52'
+settings:
+  id: 'block_content:ad7c223f-c730-49b4-960f-e7dc979f8a52'
+  label: 'Què pot fer AURA?'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

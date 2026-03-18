@@ -1,6 +1,7 @@
 # Drupal core
 /sites/*/files
 /sites/*/private
+/sites/*/files/sync
 /core
 /profiles/*
 !/profiles/README.txt
@@ -14,6 +15,7 @@
 # Drupal (web/ docroot)
 /web/sites/*/files
 /web/sites/*/private
+/web/sites/*/files/sync
 /web/core
 /web/profiles/*
 !/web/profiles/README.txt

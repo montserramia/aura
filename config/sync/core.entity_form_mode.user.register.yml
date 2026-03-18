@@ -1,0 +1,13 @@
+uuid: db7edf45-f4c9-418b-95fc-562efc16333d
+langcode: ca
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: 1TFiplNN7Wmj_DtVLLLP-NLPYpZJdAswKY-vTrYgFyo
+id: user.register
+label: Registra
+description: null
+targetEntityType: user
+cache: true

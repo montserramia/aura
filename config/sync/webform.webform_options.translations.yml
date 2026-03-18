@@ -1,0 +1,14 @@
+uuid: fc048655-8b5b-4ecd-a52f-48479c6f2965
+langcode: ca
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+_core:
+  default_config_hash: Mb_L3vE-0IBZH5s2rjpk2LNn0QHClQP9AARQdCmVLt4
+id: translations
+label: Translations
+category: Llengua
+likert: false
+options: ''

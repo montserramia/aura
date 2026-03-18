@@ -1,0 +1,13 @@
+uuid: 8d7267b3-0b55-41c0-aec7-5b98be5ffc4f
+langcode: ca
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: TtD7OuGskOsQfoGyxXkrdtllBpR37J19d5BMQDZWJgA
+id: user.compact
+label: Compacta
+description: ''
+targetEntityType: user
+cache: true
