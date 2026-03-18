@@ -51,6 +51,7 @@ composer.lock
 /.ddev/traefik
 /.ddev/config.*.yaml.example
 /.ddev/addon-metadata
+/.ddev*
 
 # Backups
 *.sql
