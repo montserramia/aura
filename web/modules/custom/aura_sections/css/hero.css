@@ -106,7 +106,14 @@
     padding: 60px 24px;
   }
   .aura-hero__content {
-    padding: 24px;
+    padding: 0 24px;
+  }
+
+  .aura-hero__title {
+    margin: 0 0 30px;
+  }
+  .aura-hero__subtitle {
+    margin: 0 70px 200px 0;
   }
 }
 
