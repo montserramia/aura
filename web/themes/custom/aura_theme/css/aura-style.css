@@ -246,7 +246,7 @@ a.cta-button {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Bitter', serif;
-  font-weight: 400; /* Bold — transmet seguretat i claredat */
+  font-weight: 600; /* Bold — transmet seguretat i claredat */
   line-height: 1.2;
   margin-top: 0;
 }
