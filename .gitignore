@@ -34,7 +34,6 @@
 /.vscode
 
 # Composer
-composer.lock
 
 # DDEV
 /.ddev/.gitignore
