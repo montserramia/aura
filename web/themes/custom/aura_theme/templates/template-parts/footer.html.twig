@@ -15,42 +15,42 @@
     <div class="footer-branding-row">
       <a href="{{ path('<front>') }}" class="footer-logo">
         <img src="{{ base_path ~ directory }}/aura-ai-logo-light.svg" alt="AURA AI" width="80">
-      </a> <span class="footer-site-name">Consultoria d'Intel·ligència Artificial</span>
+      </a> <span class="footer-site-name">{{ "Consultoria d'Intel·ligència Artificial"|t }}</span>
     </div>
 
     {# Fila 2: 3 Columnes #}
     <div class="footer-columns-row">
       {# Columna 1: Menu #}
       <div class="footer-column footer-menu">
-        <h3 class="footer-heading">MENU</h3>
+        <h3 class="footer-heading">{{ 'MENU'|t }}</h3>
         <nav class="footer-nav" role="navigation">
           <ul class="footer-links">
-            <li><a href="/">Inici</a></li>
-            <li><a href="/quisoc">Qui som</a></li>
-            <li><a href="/services">Serveis</a></li>
-            <li><a href="/blog">Recursos</a></li>
-            <li><a href="#contacte">Contacte</a></li>
+            <li><a href="/">{{ 'Inici'|t }}</a></li>
+            <li><a href="/quisoc">{{ 'Qui som'|t }}</a></li>
+            <li><a href="/services">{{ 'Serveis'|t }}</a></li>
+            <li><a href="/blog">{{ 'Recursos'|t }}</a></li>
+            <li><a href="#contacte">{{ 'Contacte'|t }}</a></li>
           </ul>
         </nav>
       </div>
 
       {# Columna 2: Contacte #}
       <div class="footer-column footer-contact">
-        <h3 class="footer-heading">CONTACTE</h3>
+        <h3 class="footer-heading">{{ 'CONTACTE'|t }}</h3>
         <address class="footer-address">
-          <p>Avinguda Constiució 197,</p>
-          <p>Castelldefels, BCN 08860</p>
-          <p>Mail: <a href="mailto:hola@aura-ia.eu">hola@aura-ia.eu</a></p>
-          <p>Tel: 674 93 33 94</p>
+          <p>{{ 'Avinguda Constiució 197,'|t }}</p>
+          <p>{{ 'Castelldefels, BCN 08860'|t }}</p>
+          <p>{{ 'Mail:'|t }} <a href="mailto:hola@aura-ia.eu">hola@aura-ia.eu</a></p>
+          <p>{{ 'Tel:'|t }} 674 93 33 94</p>
         </address>
       </div>
 
       {# Columna 3: Legal #}
       <div class="footer-column footer-legal">
-        <h3 class="footer-heading">LEGAL</h3>
+        <h3 class="footer-heading">{{ 'LEGAL'|t }}</h3>
         <ul class="footer-legal-links">
-          <li><a href="/privacy-policy">Política de Privacitat</a></li>
-          <li><a href="/accessibilitat">Declaració d'accessibilitat</a></li>
+          <li><a href="/privacy-policy">{{ 'Política de Privacitat'|t }}</a></li>
+          <li><a href="/accessibilitat">{{ "Declaració d'accessibilitat"|t }}</a></li>
         </ul>
       </div>
     </div>
@@ -58,7 +58,7 @@
     {# Fila 3: Copyright #}
     <div class="footer-bottom-row">
       <span class="footer-copyright">
-        © {{ "now"|date("Y") }} by AURA AI. | Desenvolupat i mantingut per <a href="https://newwweb.cat/" target="_blank" rel="noopener">newWweb</a>
+        © {{ "now"|date("Y") }} {{ 'by AURA AI.'|t }} | {{ 'Desenvolupat i mantingut per'|t }} <a href="https://newwweb.cat/" target="_blank" rel="noopener">newWweb</a>
       </span>
     </div>
   </div>
