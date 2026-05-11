@@ -5,6 +5,24 @@
  */
 #}
 <div class="page-wrapper">
+  {% if page.language_switch or page.secondary_menu %}
+    <div class="utility-bar">
+      <div class="utility-bar-inner">
+        {% if page.secondary_menu %}
+          <div class="secondary-menu-region">
+            {{ page.secondary_menu }}
+          </div>
+        {% endif %}
+
+        {% if page.language_switch %}
+          <div class="language-switch-region">
+            {{ page.language_switch }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+
   <header class="site-header" role="banner">
     {{ page.header }}
     {% if page.primary_menu %}
@@ -19,9 +37,7 @@
     </button>
   </header>
 
-  {% if page.hero_video %}
-    {{ page.hero_video }}
-  {% elseif page.hero %}
+  {% if page.hero %}
     <section class="hero-region">
       {{ page.hero }}
     </section>
@@ -36,6 +52,12 @@
 
   <main class="main-content" role="main">
     <section>
+      {% if page.breadcrumb %}
+        <nav class="breadcrumb-region" aria-label="Fil d'ariadna">
+          {{ page.breadcrumb }}
+        </nav>
+      {% endif %}
+
       {% if page.highlighted %}
         <div class="highlighted region-highlighted">
           {{ page.highlighted }}
@@ -44,9 +66,20 @@
       {% if page.content_above %}
         <div class="content-above">{{ page.content_above }}</div>
       {% endif %}
-      <div class="content-wrapper">
-        {{ page.content }}
+      <div class="content-layout{% if page.sidebar %} has-sidebar{% endif %}">
+        <div class="content-main">
+          <div class="content-wrapper">
+            {{ page.content }}
+          </div>
+        </div>
+
+        {% if page.sidebar %}
+          <aside class="sidebar sidebar-region" aria-label="Barra lateral">
+            {{ page.sidebar }}
+          </aside>
+        {% endif %}
       </div>
+
       {% if page.content_below %}
         <div class="content-below">{{ page.content_below }}</div>
       {% endif %}

@@ -11,6 +11,7 @@ libraries:
 
 regions:
   header: 'Header'
+  language_switch: 'Language switch'
   primary_menu: 'Primary menu'
   secondary_menu: 'Secondary menu'
   breadcrumb: 'Breadcrumb'
@@ -21,6 +22,5 @@ regions:
   content: 'Content'
   content_below: 'Content Below'
   sidebar: 'Sidebar'
-  footer: 'Footer'
 
 logo: aura-logo.svg

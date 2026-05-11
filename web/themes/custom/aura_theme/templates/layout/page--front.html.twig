@@ -1,5 +1,23 @@
 {# Front page override to ensure AURA layout applies on homepage #}
 <div class="page-wrapper">
+  {% if page.language_switch or page.secondary_menu %}
+    <div class="utility-bar">
+      <div class="utility-bar-inner">
+        {% if page.secondary_menu %}
+          <div class="secondary-menu-region">
+            {{ page.secondary_menu }}
+          </div>
+        {% endif %}
+
+        {% if page.language_switch %}
+          <div class="language-switch-region">
+            {{ page.language_switch }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+
   <header class="site-header" role="banner">
     {{ page.header }}
     {% if page.primary_menu %}

@@ -14,9 +14,8 @@ Document per deixar constància dels canvis i criteris visuals. Actualitza'l a m
 
 ## Estructura de pàgina
 - `page.html.twig` crea `page-wrapper` amb `site-header` fix, `hero-region`, `main-content` (contenidors highlighted/content above/content/content below) i `site-footer`.
-- `page.html.twig` mostra `hero_video` si existeix; si no, cau a la regió `hero`.
+- `page.html.twig` mostra `hero` i afegeix `breadcrumb` i `sidebar` a les pàgines no front.
 - `region--hero.html.twig` només mostra contingut de l'hero d'AURA.
-- `region--hero-video.html.twig` renderitza el vídeo invertit (hero.mp4 + poster) i el contingut de la regió `hero_video`.
 
 ## CSS clau (aura-style.css)
 - Header/Footer: overlays clars + `backdrop-filter` per deixar entreveure el fons fosc.
@@ -33,7 +32,6 @@ Document per deixar constància dels canvis i criteris visuals. Actualitza'l a m
 - [ ] Documentar qualsevol nou component o classe utilitzada fora de `aura-style.css`.
 - [ ] Si s'afegeixen variants d'overlay, afegir valors i ús aquí.
 - [ ] Si es canvia el comportament del menú mòbil, descriure transicions i breakpoints.
-- [x] Crear plantilla específica `region--hero-video.html.twig` per al hero amb vídeo invertit.
 
 ## Ruta dels fitxers rellevants
 - Config tema: `web/themes/custom/aura_theme/aura_theme.info.yml`, `aura_theme.libraries.yml`.
