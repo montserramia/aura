@@ -1,0 +1,25 @@
+block.settings.aura_hero_block:
+  type: block_settings
+  label: 'AURA Hero block settings'
+  mapping:
+    title:
+      type: label
+      label: 'Hero title'
+      translatable: true
+    subtitle:
+      type: text
+      label: 'Hero subtitle'
+      translatable: true
+    button_text:
+      type: label
+      label: 'Hero button text'
+      translatable: true
+    button_link:
+      type: string
+      label: 'Hero button link'
+    background_video:
+      type: string
+      label: 'Hero background video path'
+    background_video_poster:
+      type: string
+      label: 'Hero poster image path'
