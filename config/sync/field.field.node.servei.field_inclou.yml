@@ -1,0 +1,18 @@
+langcode: ca
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_inclou
+    - node.type.servei
+id: node.servei.field_inclou
+field_name: field_inclou
+entity_type: node
+bundle: servei
+label: 'Què inclou'
+description: 'Llista d''elements inclosos al servei. Un element per entrada. Cardinality il·limitada.'
+required: false
+translatable: true
+default_value: {}
+default_value_callback: ''
+settings: {}
+field_type: string

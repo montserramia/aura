@@ -1,0 +1,60 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.servei.field_cta_text
+    - field.field.node.servei.field_cta_url
+    - field.field.node.servei.field_ganxo
+    - field.field.node.servei.field_grup
+    - field.field.node.servei.field_icona
+    - field.field.node.servei.field_resum
+    - node.type.servei
+  module:
+    - text
+    - user
+uuid: 7bc71ffd-65fa-47ef-9ba8-15ab8aa5ff7c
+id: node.servei.teaser
+targetEntityType: node
+bundle: servei
+mode: teaser
+content:
+  field_icona:
+    label: hidden
+    type: string
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {}
+  field_ganxo:
+    label: hidden
+    type: string
+    weight: 1
+    region: content
+    settings:
+      link_to_entity: true
+    third_party_settings: {}
+  field_resum:
+    label: hidden
+    type: text_default
+    weight: 2
+    region: content
+    settings: {}
+    third_party_settings: {}
+  field_cta_text:
+    label: hidden
+    type: string
+    weight: 3
+    region: content
+    settings:
+      link_to_entity: true
+    third_party_settings: {}
+hidden:
+  field_grup: true
+  field_destinataris: true
+  body: true
+  field_inclou: true
+  field_cta_url: true
+  field_serveis_relacionats: true
+  links: true
+  langcode: true

@@ -1,0 +1,30 @@
+langcode: ca
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_grup
+    - node.type.servei
+    - taxonomy.vocabulary.grup_servei
+  module:
+    - taxonomy
+id: node.servei.field_grup
+field_name: field_grup
+entity_type: node
+bundle: servei
+label: 'Grup'
+description: 'Agrupació del servei: Descobreix, Capacita, Implementa, Evoluciona'
+required: true
+translatable: false
+default_value: {}
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      grup_servei: grup_servei
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,22 @@
+langcode: ca
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cta_url
+    - node.type.servei
+  module:
+    - link
+id: node.servei.field_cta_url
+field_name: field_cta_url
+entity_type: node
+bundle: servei
+label: 'URL del CTA'
+description: 'Destí del botó d''acció. Usa /contacte si no tens URL específica.'
+required: false
+translatable: false
+default_value: {}
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 17
+field_type: link

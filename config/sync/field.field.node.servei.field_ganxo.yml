@@ -1,0 +1,18 @@
+langcode: ca
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ganxo
+    - node.type.servei
+id: node.servei.field_ganxo
+field_name: field_ganxo
+entity_type: node
+bundle: servei
+label: 'Ganxo'
+description: 'Pregunta o afirmació positiva que descriu el servei (per a cards i capçalera de pàgina)'
+required: true
+translatable: true
+default_value: {}
+default_value_callback: ''
+settings: {}
+field_type: string

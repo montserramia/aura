@@ -1,0 +1,12 @@
+langcode: ca
+status: true
+dependencies: {}
+third_party_settings: {}
+uuid: d42da480-2b81-4923-9fc0-4f1f0d57676b
+name: Servei
+type: servei
+description: 'Serveis d''AURA AI per a la pàgina de serveis'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

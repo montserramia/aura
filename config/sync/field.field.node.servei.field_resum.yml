@@ -1,0 +1,20 @@
+langcode: ca
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resum
+    - node.type.servei
+  module:
+    - text
+id: node.servei.field_resum
+field_name: field_resum
+entity_type: node
+bundle: servei
+label: 'Resum'
+description: 'Text breu que apareix a les cards de la pàgina /serveis (2-3 línies màxim)'
+required: true
+translatable: true
+default_value: {}
+default_value_callback: ''
+settings: {}
+field_type: text_long

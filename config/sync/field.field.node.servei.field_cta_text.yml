@@ -1,0 +1,18 @@
+langcode: ca
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cta_text
+    - node.type.servei
+id: node.servei.field_cta_text
+field_name: field_cta_text
+entity_type: node
+bundle: servei
+label: 'Text del CTA'
+description: 'Text del botó d''acció principal (ex: Sol·licita la teva auditoria)'
+required: false
+translatable: true
+default_value: {}
+default_value_callback: ''
+settings: {}
+field_type: string

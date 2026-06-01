@@ -1,0 +1,129 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.servei.field_cta_text
+    - field.field.node.servei.field_cta_url
+    - field.field.node.servei.field_destinataris
+    - field.field.node.servei.field_ganxo
+    - field.field.node.servei.field_grup
+    - field.field.node.servei.field_icona
+    - field.field.node.servei.field_inclou
+    - field.field.node.servei.field_resum
+    - field.field.node.servei.field_serveis_relacionats
+    - node.type.servei
+  module:
+    - link
+    - path
+    - text
+uuid: a516fba5-8d0c-43aa-bbd3-f75b6f8578f0
+id: node.servei.default
+targetEntityType: node
+bundle: servei
+mode: default
+content:
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: 'Nom del servei (ex: Auditoria IA Express)'
+    third_party_settings: {}
+  field_grup:
+    type: options_select
+    weight: -4
+    region: content
+    settings: {}
+    third_party_settings: {}
+  field_icona:
+    type: string_textfield
+    weight: -3
+    region: content
+    settings:
+      size: 60
+      placeholder: 'Ex: icon-search-ai'
+    third_party_settings: {}
+  field_ganxo:
+    type: string_textfield
+    weight: -2
+    region: content
+    settings:
+      size: 60
+      placeholder: 'Ex: Descobreix on és la teva organització i fins on pot arribar amb la IA'
+    third_party_settings: {}
+  field_resum:
+    type: text_textarea
+    weight: -1
+    region: content
+    settings:
+      rows: 3
+      placeholder: 'Text breu per a les cards. 2-3 línies màxim.'
+    third_party_settings: {}
+  body:
+    type: text_textarea_with_summary
+    weight: 0
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {}
+  field_inclou:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: 'Un element per entrada (afegeix tantes com calgui)'
+    third_party_settings: {}
+  field_destinataris:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 2
+      placeholder: 'Ex: Empreses europees, universitats i administracions públiques'
+    third_party_settings: {}
+  field_cta_text:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: 'Ex: Sol·licita la teva auditoria'
+    third_party_settings: {}
+  field_cta_url:
+    type: link_default
+    weight: 4
+    region: content
+    settings:
+      placeholder_url: '/contacte'
+      placeholder_title: ''
+    third_party_settings: {}
+  field_serveis_relacionats:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: 'Busca i afegeix serveis relacionats (màx. 3 recomanat)'
+    third_party_settings: {}
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {}
+    third_party_settings: {}
+hidden:
+  created: true
+  uid: true
+  status: true
+  promote: true
+  sticky: true
+  revision_log: true
+  revision_information: true
+  langcode: true
+  translation: true

@@ -1,0 +1,112 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.servei.field_cta_text
+    - field.field.node.servei.field_cta_url
+    - field.field.node.servei.field_destinataris
+    - field.field.node.servei.field_ganxo
+    - field.field.node.servei.field_grup
+    - field.field.node.servei.field_icona
+    - field.field.node.servei.field_inclou
+    - field.field.node.servei.field_resum
+    - field.field.node.servei.field_serveis_relacionats
+    - node.type.servei
+  module:
+    - link
+    - text
+    - user
+uuid: 077dd2e0-bceb-49a1-b37d-43f4c5386ec0
+id: node.servei.default
+targetEntityType: node
+bundle: servei
+mode: default
+content:
+  field_icona:
+    label: hidden
+    type: string
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {}
+  field_grup:
+    label: hidden
+    type: entity_reference_label
+    weight: 1
+    region: content
+    settings:
+      link: false
+    third_party_settings: {}
+  field_ganxo:
+    label: hidden
+    type: string
+    weight: 2
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {}
+  field_resum:
+    label: hidden
+    type: text_default
+    weight: 3
+    region: content
+    settings: {}
+    third_party_settings: {}
+  body:
+    label: hidden
+    type: text_default
+    weight: 4
+    region: content
+    settings: {}
+    third_party_settings: {}
+  field_inclou:
+    label: above
+    type: string
+    weight: 5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {}
+  field_destinataris:
+    label: above
+    type: text_default
+    weight: 6
+    region: content
+    settings: {}
+    third_party_settings: {}
+  field_cta_text:
+    label: hidden
+    type: string
+    weight: 7
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {}
+  field_cta_url:
+    label: hidden
+    type: link
+    weight: 8
+    region: content
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {}
+  field_serveis_relacionats:
+    label: above
+    type: entity_reference_label
+    weight: 9
+    region: content
+    settings:
+      link: true
+    third_party_settings: {}
+  links:
+    weight: 100
+    region: content
+    settings: {}
+    third_party_settings: {}
+hidden:
+  langcode: true

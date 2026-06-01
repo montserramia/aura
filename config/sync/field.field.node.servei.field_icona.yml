@@ -1,0 +1,18 @@
+langcode: ca
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_icona
+    - node.type.servei
+id: node.servei.field_icona
+field_name: field_icona
+entity_type: node
+bundle: servei
+label: 'Icona'
+description: 'Classe CSS de la icona (ex: icon-search-ai) o emoji de referència'
+required: false
+translatable: false
+default_value: {}
+default_value_callback: ''
+settings: {}
+field_type: string

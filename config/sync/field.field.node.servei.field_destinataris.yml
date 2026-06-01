@@ -1,0 +1,20 @@
+langcode: ca
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_destinataris
+    - node.type.servei
+  module:
+    - text
+id: node.servei.field_destinataris
+field_name: field_destinataris
+entity_type: node
+bundle: servei
+label: 'Destinataris'
+description: 'A qui va dirigit el servei'
+required: false
+translatable: true
+default_value: {}
+default_value_callback: ''
+settings: {}
+field_type: text_long

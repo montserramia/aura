@@ -1,0 +1,26 @@
+langcode: ca
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_serveis_relacionats
+    - node.type.servei
+id: node.servei.field_serveis_relacionats
+field_name: field_serveis_relacionats
+entity_type: node
+bundle: servei
+label: 'Serveis relacionats'
+description: 'Serveis relacionats que es mostraran com a cards al final de la pàgina. Màxim recomanat: 3.'
+required: false
+translatable: false
+default_value: {}
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      servei: servei
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
