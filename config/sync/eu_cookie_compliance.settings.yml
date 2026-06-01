@@ -3,6 +3,7 @@ _core:
 langcode: ca
 dependencies:
   config:
+    - filter.format.basic_html
     - filter.format.full_html
 uuid: ba1d3102-7a62-4924-9294-a71f53d06b01
 popup_enabled: true
@@ -23,13 +24,13 @@ popup_info_template: new
 popup_agree_button_message: Accepto
 popup_more_info_button_message: 'Més info'
 mobile_breakpoint: 768
-popup_agreed_enabled: false
+popup_agreed_enabled: true
 popup_hide_agreed: false
 disagree_button_label: 'No, merci'
 popup_agreed:
-  value: '<h2>Thank you for accepting cookies</h2><p>You can now hide this message or find out more about cookies.</p>'
+  value: '<h2><span class="Y2IQFc" lang="ca">Gràcies per acceptar les galete</span>s</h2><p><span class="Y2IQFc" lang="ca">Ara podeu ocultar aquest missatge o obtenir més informació sobre les galetes</span>.</p>'
   format: full_html
-popup_find_more_button_message: 'More info'
+popup_find_more_button_message: 'Més info'
 popup_hide_button_message: Oculta
 popup_link: /privacy-policy
 popup_link_new_window: true
@@ -65,8 +66,8 @@ consent_storage_method: do_not_store
 withdraw_message:
   value: "<h2>Fem servir cookies en aquest lloc per millorar la vostra experiència d'usuari</h2><p>En fer clic al botó Accepta, accepteu que ho fem.</p>"
   format: full_html
-withdraw_tab_button_label: 'Privacy settings'
-withdraw_action_button_label: 'Withdraw consent'
+withdraw_tab_button_label: 'Configuració de Privacitat'
+withdraw_action_button_label: 'Retirar el consentiment'
 withdraw_enabled: false
 withdraw_button_on_info_popup: false
 save_preferences_button_label: 'Save preferences'

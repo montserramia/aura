@@ -1,0 +1,30 @@
+label: 'Bloc Qui est en ligne'
+description: "Affiche les noms des utilisateurs les plus actifs r'e9cemment, ainsi que le nombre total d'utilisateurs actifs."
+display:
+  default:
+    display_title: 'Par défaut'
+    display_options:
+      title: 'Qui est en ligne'
+      exposed_form:
+        options:
+          submit_button: Appliquer
+          reset_button_label: Réinitialiser
+          exposed_sorts_label: 'Trier par'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      empty:
+        area_text_custom:
+          content: 'Il y a actuellement 0 utilisateur en ligne.'
+      filters:
+        access:
+          expose:
+            label: 'Dernier accès'
+            description: "Un utilisateur est consid'e9r'e9 en ligne pendant cette dur'e9e apr'e8s avoir consult'e9 une page pour la derni'e8re fois."
+      header:
+        result:
+          content: 'Il y a actuellement @total utilisateurs en ligne.'
+  who_s_online_block:
+    display_title: 'Qui est en ligne'
+    display_options:
+      display_description: "Une liste des utilisateurs actuellement connect'e9s."
+      block_description: 'Qui est en ligne'

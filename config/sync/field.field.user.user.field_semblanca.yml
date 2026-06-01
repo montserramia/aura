@@ -1,0 +1,26 @@
+uuid: c2ca416d-ca17-468a-a881-b36dbaf95bc2
+langcode: ca
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_semblanca
+    - filter.format.basic_html
+    - filter.format.full_html
+  module:
+    - text
+    - user
+id: user.user.field_semblanca
+field_name: field_semblanca
+entity_type: user
+bundle: user
+label: Semblança
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+    - full_html
+field_type: text_long

@@ -1,0 +1,47 @@
+settings:
+  default_form_open_message: "Ce formulaire n'a pas encore 'e9t'e9 ouvert aux soumissions."
+  default_form_exception_message: "Impossible d'afficher ce formulaire. Veuillez contacter l'administrateur du site."
+  default_submit_button_label: Soumettre
+  default_reset_button_label: Réinitialiser
+  default_delete_button_label: Supprimer
+  default_form_access_denied_message: "Veuillez vous connecter pour acc'e9der 'e0 ce formulaire."
+  default_form_required_label: 'Indique un champ obligatoire'
+  default_form_file_limit_message: "Le quota de t'e9l'e9chargement de fichiers de ce formulaire (%quota) a 'e9t'e9 d'e9pass'e9. Veuillez supprimer certains fichiers."
+  default_wizard_prev_button_label: "< Pr'e9c'e9dent"
+  default_wizard_next_button_label: 'Suivant >'
+  default_wizard_start_label: "D'e9marrer"
+  default_wizard_confirmation_label: Terminer
+  default_wizard_toggle_show_label: 'Tout afficher'
+  default_wizard_toggle_hide_label: 'Tout masquer'
+  default_preview_next_button_label: Aperçu
+  default_preview_prev_button_label: "< Pr'e9c'e9dent"
+  default_preview_label: Aperçu
+  default_preview_title: "[webform:title] : Aper'e7u"
+  default_draft_button_label: 'Enregistrer le brouillon'
+  default_draft_saved_message: "Soumission enregistr'e9e. Vous pouvez revenir sur ce formulaire plus tard et il restaurera les valeurs actuelles."
+  default_draft_loaded_message: "Un formulaire partiellement rempli a 'e9t'e9 trouv'e9. Veuillez compl'e9ter les parties restantes."
+  default_confirmation_message: "Nouvelle soumission ajout'e9e 'e0 [webform:title]."
+  default_confirmation_back_label: 'Retour au formulaire'
+  default_submission_label: '[webform_submission:submitted-to] : Soumission #[webform_submission:serial]'
+  default_submission_access_denied_message: "Veuillez vous connecter pour acc'e9der 'e0 cette soumission."
+  default_submission_exception_message: "Impossible de traiter cette soumission. Veuillez contacter l'administrateur du site."
+  default_submission_locked_message: "Cette soumission a 'e9t'e9 verrouill'e9e."
+  default_autofill_message: "Cette soumission a 'e9t'e9 automatiquement remplie avec votre soumission pr'e9c'e9dente."
+  default_limit_total_message: "Aucune soumission suppl'e9mentaire n'est autoris'e9e."
+  default_limit_user_message: "Aucune soumission suppl'e9mentaire n'est autoris'e9e."
+  dialog_options:
+    narrow:
+      title: Étroit
+    normal:
+      title: Normal
+    wide:
+      title: Large
+element:
+  empty_message: '{Vide}'
+  default_more_title: Plus
+  default_section_title_tag: h2
+file:
+  file_private_redirect_message: "Veuillez vous connecter pour acc'e9der au fichier t'e9l'e9charg'e9."
+mail:
+  default_from_name: '[site:name]'
+  default_subject: 'Soumission de formulaire depuis : [webform_submission:source-title]'

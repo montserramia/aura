@@ -1,0 +1,18 @@
+popup_info:
+  value: '<h2>Su questo sito utilizziamo i cookie per migliorare la tua esperienza di navigazione</h2><p>Cliccando sul pulsante “Accetta”, acconsenti a tale utilizzo.</p>'
+  format: full_html
+popup_agree_button_message: Accetto
+popup_more_info_button_message: 'Maggiori informazioni'
+disagree_button_label: 'No, grazie'
+popup_agreed:
+  value: '<h2><span class="Y2IQFc" lang="ca">Grazie per aver accettato i cookie</span></h2><p><span class="Y2IQFc" lang="ca">Ora puoi nascondere questo messaggio o ottenere ulteriori informazioni sui cookie</span>.</p>'
+  format: full_html
+popup_find_more_button_message: 'Maggiori informazioni'
+popup_hide_button_message: Nascosto
+withdraw_message:
+  value: '<h2>Su questo sito utilizziamo i cookie per migliorare la tua esperienza di navigazione</h2><p>Cliccando sul pulsante “Accetta”, acconsenti a tale utilizzo.</p>'
+  format: full_html
+withdraw_tab_button_label: 'Impostazioni sulla privacy'
+withdraw_action_button_label: 'Revocare il consenso'
+save_preferences_button_label: 'Salva le preferenze'
+accept_all_categories_button_label: 'Accetta tutti i cookie'

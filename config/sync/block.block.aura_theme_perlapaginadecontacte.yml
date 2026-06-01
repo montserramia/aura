@@ -6,6 +6,7 @@ dependencies:
     - 'block_content:basic:923d558c-48de-4f44-b2cf-fa207756d4f1'
   module:
     - block_content
+    - system
   theme:
     - aura_theme
 id: aura_theme_perlapaginadecontacte
@@ -20,4 +21,8 @@ settings:
   label_display: '0'
   provider: block_content
   view_mode: full
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

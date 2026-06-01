@@ -1,0 +1,18 @@
+uuid: f8c5e4b7-cfda-442b-8301-15ca76cff2d6
+langcode: ca
+status: true
+dependencies:
+  config:
+    - node.type.article
+id: node.article.title
+field_name: title
+entity_type: node
+bundle: article
+label: Títol
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

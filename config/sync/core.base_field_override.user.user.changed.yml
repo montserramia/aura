@@ -1,0 +1,18 @@
+uuid: cc8cbeaf-a0bb-4254-a018-adf32c5a9b59
+langcode: ca
+status: true
+dependencies:
+  module:
+    - user
+id: user.user.changed
+field_name: changed
+entity_type: user
+bundle: user
+label: Canviat
+description: "La data en què l'usuari fou editat per darrer cop."
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

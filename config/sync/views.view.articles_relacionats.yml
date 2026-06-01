@@ -249,12 +249,12 @@ display:
             type: none
             fail: 'not found'
           validate_options: {  }
-          exception_value: all
-          not: true
           break_phrase: false
           add_table: false
           require_value: false
           reduce_duplicates: true
+          exception_value: all
+          not: true
       filters:
         type:
           id: type

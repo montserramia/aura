@@ -24,10 +24,11 @@ settings:
       - blockQuote
       - drupalInsertImage
       - '|'
+      - insertTable
       - heading
       - code
-      - '|'
       - sourceEditing
+      - '|'
   plugins:
     ckeditor5_heading:
       enabled_headings:

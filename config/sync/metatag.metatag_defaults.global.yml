@@ -1,0 +1,17 @@
+uuid: 5ad1d4b6-435c-40a0-addb-bdfe3a74bfd9
+langcode: ca
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sL588ui1E_8-2c_UupwyYxcqX2OVyMFp3HTLbbFqvPc
+id: global
+label: Global
+tags:
+  abstract: "Consultoria d'IA per a organitzacions que volen implementar intel·ligència artificial de manera segura, no invasiva i amb impacte humà mesurable."
+  canonical_url: '[current-page:url]'
+  description: 'AURA integra la IA al teu projecte amb criteri, ètica i compliment normatiu europeu (RGPD). Metodologia A·U·R·A: Anàlisi, Ús estratègic, Resultats operatius i Adaptació continuada.'
+  keywords: 'Consultoria IA aplicada, metodologia intel·ligència artificial, Compliment Normatiu IA,  Transparència intel·ligència artificial, '
+  robots: 'index, follow'
+  schema_web_page_type: WebPage
+  schema_web_site_type: WebSite
+  title: '[current-page:title] | [site:name]'

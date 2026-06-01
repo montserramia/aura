@@ -1,0 +1,21 @@
+display:
+  default:
+    display_options:
+      title: 'Information about AI for informed decision-making'
+      exposed_form:
+        options:
+          submit_button: Aply
+          reset_button_label: Restart
+      header:
+        area:
+          content:
+            value: '<h2>Information about AI for<br>Decision Making</h2><p>Stay up to date with our latest blog posts</p>'
+            format: basic_html
+  block_1:
+    display_options:
+      title: 'Information about AI for informed decision-making'
+      footer:
+        area:
+          content:
+            value: '<div align="center"><a class="cta-button" style="margin:2em;" href="/en/blog">See All</a></div>'
+            format: full_html

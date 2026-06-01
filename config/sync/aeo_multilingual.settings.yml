@@ -1,0 +1,5 @@
+_core:
+  default_config_hash: Gp_yGdvL761h6km7lsvgcLznsVa_NZYSnV5O-QJca-o
+enabled_content_types:
+  article: article
+score_threshold: 70

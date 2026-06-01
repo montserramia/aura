@@ -1,0 +1,18 @@
+uuid: 029980c3-deb6-4982-ab78-6a4302c872d3
+langcode: ca
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1noCXlegCr5HFehQRF1ViXy1jhU1jZ_sNN99a8Sj5jo
+id: front
+label: Portada
+tags:
+  abstract: "Consultoria d'IA per a organitzacions que volen implementar intel·ligència artificial de manera segura, no invasiva i amb impacte humà mesurable."
+  canonical_url: '[site:url]'
+  description: 'AURA integra la IA al teu projecte amb criteri, ètica i compliment normatiu europeu (RGPD). Metodologia A·U·R·A: Anàlisi, Ús estratègic, Resultats operatius i Adaptació continuada.'
+  schema_web_page_type: WebPage
+  schema_web_site_name: 'AURA AI – La IA que entén el teu negoci'
+  schema_web_site_type: WebSite
+  schema_web_site_url: 'https://aura-ai.eu/'
+  shortlink: '[site:url]'
+  title: "AURA AI – Consultoria d'Intel·ligència Artificial ètica i sobirana"

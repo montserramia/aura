@@ -21,6 +21,7 @@ permissions:
   - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
+  - 'access user profiles'
   - 'display eu cookie compliance popup'
   - 'post comments'
   - 'search content'

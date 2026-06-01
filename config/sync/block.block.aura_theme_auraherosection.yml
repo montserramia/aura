@@ -21,9 +21,9 @@ settings:
   title: 'Com tu, volem que la IA sigui fidel als teus propòsits'
   subtitle: "Un procés pensat per transformar les teves idees en solucions reals, pas a pas.\r\n\r\n"
   button_text: Parlem-ne
-  button_link: '#contact'
-  background_video: /themes/custom/aura_theme/video/hero-1.mp4
-  background_video_poster: /themes/custom/aura_theme/images/frame_000.png
+  button_link: '#contacte'
+  background_video: /themes/custom/aura_theme/video/hero-1.webm
+  background_video_poster: /themes/custom/aura_theme/images/20260318182325.png
 visibility:
   request_path:
     id: request_path

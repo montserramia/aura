@@ -1,0 +1,6 @@
+popup_info:
+  value: '<h2>We use cookies on this site to improve your user experience.</h2><p>By clicking the Accept button, you agree to us doing this.</p>'
+  format: full_html
+popup_agree_button_message: Accept
+popup_more_info_button_message: 'More info'
+disagree_button_label: 'No, thanks'

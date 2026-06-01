@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - comment
+    - menu_ui
 third_party_settings:
   comment:
     comment_node_article:
@@ -11,6 +12,10 @@ third_party_settings:
       preview: 1
       form_location: full
       default: 0
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
 _core:
   default_config_hash: Fe3N1uqaAyyKJbVkqT-btXy3t98puW8GCRD822xjl10
 name: Article

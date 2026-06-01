@@ -1,0 +1,20 @@
+label: "Commentaires r'e9cents"
+description: "Commentaires r'e9cents."
+display:
+  default:
+    display_title: 'Par défaut'
+    display_options:
+      title: "Commentaires r'e9cents"
+      fields:
+        changed:
+          settings:
+            future_format: 'Dans @interval'
+            past_format: 'il y a @interval'
+      empty:
+        area_text_custom:
+          content: 'Aucun commentaire disponible.'
+  block_1:
+    display_title: Bloc
+    display_options:
+      block_description: "Commentaires r'e9cents"
+      block_category: 'Listes (Views)'

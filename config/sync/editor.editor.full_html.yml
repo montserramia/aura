@@ -15,6 +15,7 @@ settings:
     items:
       - bold
       - italic
+      - underline
       - strikethrough
       - superscript
       - subscript
@@ -24,17 +25,27 @@ settings:
       - '|'
       - bulletedList
       - numberedList
+      - alignment
+      - indent
+      - outdent
       - '|'
       - blockQuote
       - drupalInsertImage
       - insertTable
       - horizontalLine
+      - showBlocks
       - '|'
       - heading
       - codeBlock
       - '|'
       - sourceEditing
   plugins:
+    ckeditor5_alignment:
+      enabled_alignments:
+        - center
+        - justify
+        - left
+        - right
     ckeditor5_codeBlock:
       languages:
         -

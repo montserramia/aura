@@ -1,0 +1,18 @@
+uuid: 66ba063e-9568-441b-815e-549e77dbc8d9
+langcode: ca
+status: true
+dependencies:
+  config:
+    - comment.type.comment
+id: comment.comment.hostname
+field_name: hostname
+entity_type: comment
+bundle: comment
+label: "Nom de l'ordinador"
+description: "El nom d'amfitrió de l'autor de comentaris."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\comment\Entity\Comment::getDefaultHostname'
+settings: {  }
+field_type: string

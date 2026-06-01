@@ -1,0 +1,13 @@
+uuid: ed05fe83-d327-4516-add9-b24ab6a1a25b
+langcode: ca
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: rpwvgyEURXLz_JjgMCrkS1rUv-0k3L79BpO-ReN7fDI
+id: node
+label: Contingut
+tags:
+  canonical_url: '[node:url]'
+  description: '[node:summary]'
+  keywords: '[node:field_tags]'
+  title: '[node:title]'

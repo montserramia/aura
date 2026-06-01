@@ -1,0 +1,19 @@
+uuid: 95e9cb12-a8d9-47cd-8a60-887be7c6e357
+langcode: ca
+status: true
+dependencies:
+  module:
+    - text
+    - user
+id: user.field_semblanca
+field_name: field_semblanca
+entity_type: user
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

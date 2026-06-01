@@ -11,7 +11,7 @@ dependencies:
 _core:
   default_config_hash: uIuCYXi8Y6GTe4pKUxK2t9OjQEcrwvFJZFeitfnQ8Ys
 id: webform_submissions
-label: 'Webform submissions'
+label: 'Enviaments del Webform'
 module: views
 description: 'Default webform submissions views.'
 tag: ''
@@ -24,7 +24,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Webform submissions'
+      title: 'Enviaments del Webform'
       fields:
         sid:
           id: sid
@@ -998,7 +998,7 @@ display:
           entity_type: webform_submission
           entity_field: completed
           plugin_id: field
-          label: Completed
+          label: Completat
           exclude: false
           alter:
             alter_text: false
@@ -1915,7 +1915,7 @@ display:
           entity_type: webform_submission
           entity_field: completed
           plugin_id: field
-          label: Completed
+          label: Completat
           exclude: false
           alter:
             alter_text: false
@@ -2743,7 +2743,7 @@ display:
           entity_type: webform_submission
           entity_field: completed
           plugin_id: field
-          label: Completed
+          label: Completat
           exclude: false
           alter:
             alter_text: false

@@ -1,0 +1,20 @@
+uuid: 8b33083b-210c-494f-ac2c-ad8ebbca0103
+langcode: ca
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - aura_theme
+id: aura_theme_commutadordellengua
+theme: aura_theme
+region: language_switch
+weight: 0
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Commutador de llengua'
+  label_display: '0'
+  provider: language
+visibility: {  }

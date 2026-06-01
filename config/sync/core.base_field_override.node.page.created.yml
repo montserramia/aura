@@ -1,0 +1,18 @@
+uuid: 67ae2ce4-ab9b-4c0f-b023-ad0150e01441
+langcode: ca
+status: true
+dependencies:
+  config:
+    - node.type.page
+id: node.page.created
+field_name: created
+entity_type: node
+bundle: page
+label: 'Elaborat el'
+description: 'El dia i hora en que es va crear el contingut.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

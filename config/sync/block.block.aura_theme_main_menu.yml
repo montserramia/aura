@@ -13,7 +13,7 @@ _core:
 id: aura_theme_main_menu
 theme: aura_theme
 region: primary_menu
-weight: 0
+weight: -9
 provider: null
 plugin: 'system_menu_block:main'
 settings:

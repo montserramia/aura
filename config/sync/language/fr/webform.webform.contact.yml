@@ -1,0 +1,17 @@
+title: Contact
+description: 'Formulaire de contact email de base.'
+settings:
+  confirmation_message: 'Votre message a été envoyé.'
+handlers:
+  email_confirmation:
+    label: 'Confirmation par email'
+    settings:
+      from_name: "_par d'e9faut"
+      subject: '[webform_submission:values:subject:raw]'
+      body: '[webform_submission:values:message:value]'
+  email_notification:
+    label: 'Notification par email'
+    settings:
+      from_name: '[webform_submission:values:name:raw]'
+      subject: '[webform_submission:values:subject:raw]'
+      body: '[webform_submission:values:message:value]'
