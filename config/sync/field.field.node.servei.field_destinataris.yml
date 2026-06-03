@@ -1,3 +1,4 @@
+uuid: ab56d05e-445d-4c9d-bc58-6e50a86930d4
 langcode: ca
 status: true
 dependencies:
@@ -10,11 +11,12 @@ id: node.servei.field_destinataris
 field_name: field_destinataris
 entity_type: node
 bundle: servei
-label: 'Destinataris'
+label: Destinataris
 description: 'A qui va dirigit el servei'
 required: false
 translatable: true
-default_value: {}
+default_value: {  }
 default_value_callback: ''
-settings: {}
+settings:
+  allowed_formats: {  }
 field_type: text_long

@@ -1,6 +1,7 @@
+uuid: ef9a5de6-0a96-469f-b370-f3b1f6f555ae
 langcode: en
 status: true
-dependencies: {}
+dependencies: {  }
 id: node.field_serveis_relacionats
 field_name: field_serveis_relacionats
 entity_type: node
@@ -11,6 +12,6 @@ module: core
 locked: false
 cardinality: -1
 translatable: false
-indexes: {}
+indexes: {  }
 persist_with_no_fields: false
 custom_storage: false

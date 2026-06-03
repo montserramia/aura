@@ -1,3 +1,4 @@
+uuid: 2c15f84f-4bd2-4edf-8ebe-0a872c692ab9
 langcode: ca
 status: true
 dependencies:
@@ -9,10 +10,10 @@ field_name: field_inclou
 entity_type: node
 bundle: servei
 label: 'Què inclou'
-description: 'Llista d''elements inclosos al servei. Un element per entrada. Cardinality il·limitada.'
+description: "Llista d'elements inclosos al servei. Un element per entrada. Cardinality il·limitada."
 required: false
 translatable: true
-default_value: {}
+default_value: {  }
 default_value_callback: ''
-settings: {}
+settings: {  }
 field_type: string

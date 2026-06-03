@@ -1,3 +1,4 @@
+uuid: c010c33d-8b0e-490f-801b-3393f20fc3de
 langcode: ca
 status: true
 dependencies:
@@ -11,11 +12,11 @@ id: node.servei.field_grup
 field_name: field_grup
 entity_type: node
 bundle: servei
-label: 'Grup'
+label: Grup
 description: 'Agrupació del servei: Descobreix, Capacita, Implementa, Evoluciona'
 required: true
 translatable: false
-default_value: {}
+default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'

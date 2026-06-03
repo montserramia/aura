@@ -1,3 +1,4 @@
+uuid: aad3d500-d611-440a-b1b9-da8c2d1f999b
 langcode: ca
 status: true
 dependencies:
@@ -8,11 +9,11 @@ id: node.servei.field_ganxo
 field_name: field_ganxo
 entity_type: node
 bundle: servei
-label: 'Ganxo'
+label: Ganxo
 description: 'Pregunta o afirmació positiva que descriu el servei (per a cards i capçalera de pàgina)'
 required: true
 translatable: true
-default_value: {}
+default_value: {  }
 default_value_callback: ''
-settings: {}
+settings: {  }
 field_type: string

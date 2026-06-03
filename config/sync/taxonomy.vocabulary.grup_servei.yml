@@ -1,9 +1,9 @@
+uuid: f66e6047-0984-428b-8a54-896cc770691c
 langcode: ca
 status: true
-dependencies: {}
-uuid: f66e6047-0984-428b-8a54-896cc770691c
+dependencies: {  }
 name: 'Grup de servei'
 vid: grup_servei
 description: 'Agrupació dels serveis AURA AI: Descobreix, Capacita, Implementa, Evoluciona'
-hierarchy: 0
 weight: 0
+new_revision: false

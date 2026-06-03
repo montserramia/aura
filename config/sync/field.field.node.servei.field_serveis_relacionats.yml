@@ -1,3 +1,4 @@
+uuid: eea69a3f-208f-485d-92f9-8319fa64779a
 langcode: ca
 status: true
 dependencies:
@@ -12,7 +13,7 @@ label: 'Serveis relacionats'
 description: 'Serveis relacionats que es mostraran com a cards al final de la pàgina. Màxim recomanat: 3.'
 required: false
 translatable: false
-default_value: {}
+default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:node'

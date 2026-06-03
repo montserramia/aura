@@ -1,60 +1,72 @@
+uuid: 7bc71ffd-65fa-47ef-9ba8-15ab8aa5ff7c
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.servei.body
     - field.field.node.servei.field_cta_text
     - field.field.node.servei.field_cta_url
+    - field.field.node.servei.field_destinataris
     - field.field.node.servei.field_ganxo
     - field.field.node.servei.field_grup
     - field.field.node.servei.field_icona
+    - field.field.node.servei.field_inclou
     - field.field.node.servei.field_resum
+    - field.field.node.servei.field_serveis_relacionats
     - node.type.servei
   module:
     - text
     - user
-uuid: 7bc71ffd-65fa-47ef-9ba8-15ab8aa5ff7c
 id: node.servei.teaser
 targetEntityType: node
 bundle: servei
 mode: teaser
 content:
-  field_icona:
+  body:
+    type: text_summary_or_trimmed
     label: hidden
-    type: string
-    weight: 0
-    region: content
     settings:
-      link_to_entity: false
-    third_party_settings: {}
-  field_ganxo:
-    label: hidden
-    type: string
+      trim_length: 200
+    third_party_settings: {  }
     weight: 1
     region: content
+  field_cta_text:
+    type: string
+    label: hidden
     settings:
       link_to_entity: true
-    third_party_settings: {}
-  field_resum:
-    label: hidden
-    type: text_default
-    weight: 2
-    region: content
-    settings: {}
-    third_party_settings: {}
-  field_cta_text:
-    label: hidden
-    type: string
+    third_party_settings: {  }
     weight: 3
     region: content
+  field_ganxo:
+    type: string
+    label: hidden
     settings:
       link_to_entity: true
-    third_party_settings: {}
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_icona:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_resum:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
 hidden:
-  field_grup: true
-  field_destinataris: true
-  body: true
-  field_inclou: true
   field_cta_url: true
+  field_destinataris: true
+  field_grup: true
+  field_inclou: true
   field_serveis_relacionats: true
-  links: true
   langcode: true
+  links: true

@@ -1,3 +1,4 @@
+uuid: ae7d0c5e-b7de-4211-86fc-dfd32370678c
 langcode: ca
 status: true
 dependencies:
@@ -11,10 +12,10 @@ field_name: field_cta_url
 entity_type: node
 bundle: servei
 label: 'URL del CTA'
-description: 'Destí del botó d''acció. Usa /contacte si no tens URL específica.'
+description: "Destí del botó d'acció. Usa /contacte si no tens URL específica."
 required: false
 translatable: false
-default_value: {}
+default_value: {  }
 default_value_callback: ''
 settings:
   title: 0

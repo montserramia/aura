@@ -1,3 +1,4 @@
+uuid: 6d86ac8b-14fe-49e9-a376-3317e1ca9757
 langcode: en
 status: true
 dependencies:
@@ -7,11 +8,11 @@ id: node.field_resum
 field_name: field_resum
 entity_type: node
 type: text_long
-settings: {}
+settings: {  }
 module: text
 locked: false
 cardinality: 1
 translatable: true
-indexes: {}
+indexes: {  }
 persist_with_no_fields: false
 custom_storage: false

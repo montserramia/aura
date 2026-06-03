@@ -1,3 +1,4 @@
+uuid: 1e5b185c-668d-471c-a01c-cdcd642336f9
 langcode: en
 status: true
 dependencies:
@@ -7,11 +8,11 @@ id: node.field_cta_url
 field_name: field_cta_url
 entity_type: node
 type: link
-settings: {}
+settings: {  }
 module: link
 locked: false
 cardinality: 1
 translatable: false
-indexes: {}
+indexes: {  }
 persist_with_no_fields: false
 custom_storage: false

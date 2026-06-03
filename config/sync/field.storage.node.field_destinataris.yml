@@ -1,3 +1,4 @@
+uuid: b24a6cc8-1db3-405a-ab91-bc91ee0ccf28
 langcode: en
 status: true
 dependencies:
@@ -7,11 +8,11 @@ id: node.field_destinataris
 field_name: field_destinataris
 entity_type: node
 type: text_long
-settings: {}
+settings: {  }
 module: text
 locked: false
 cardinality: 1
 translatable: true
-indexes: {}
+indexes: {  }
 persist_with_no_fields: false
 custom_storage: false

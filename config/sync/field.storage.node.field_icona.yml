@@ -1,18 +1,19 @@
+uuid: da072196-a1b7-421d-99ce-b7115fe69221
 langcode: en
 status: true
-dependencies: {}
+dependencies: {  }
 id: node.field_icona
 field_name: field_icona
 entity_type: node
 type: string
 settings:
   max_length: 255
-  is_ascii: false
   case_sensitive: false
+  is_ascii: false
 module: core
 locked: false
 cardinality: 1
 translatable: false
-indexes: {}
+indexes: {  }
 persist_with_no_fields: false
 custom_storage: false

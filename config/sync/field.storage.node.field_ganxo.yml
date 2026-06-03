@@ -1,18 +1,19 @@
+uuid: 90615533-045b-46e3-8904-bb37bfb97ae1
 langcode: en
 status: true
-dependencies: {}
+dependencies: {  }
 id: node.field_ganxo
 field_name: field_ganxo
 entity_type: node
 type: string
 settings:
   max_length: 255
-  is_ascii: false
   case_sensitive: false
+  is_ascii: false
 module: core
 locked: false
 cardinality: 1
 translatable: true
-indexes: {}
+indexes: {  }
 persist_with_no_fields: false
 custom_storage: false

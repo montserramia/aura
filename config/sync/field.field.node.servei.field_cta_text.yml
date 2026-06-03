@@ -1,3 +1,4 @@
+uuid: 0d4bc383-313a-4d23-b5f1-dc7e1344b466
 langcode: ca
 status: true
 dependencies:
@@ -9,10 +10,10 @@ field_name: field_cta_text
 entity_type: node
 bundle: servei
 label: 'Text del CTA'
-description: 'Text del botó d''acció principal (ex: Sol·licita la teva auditoria)'
+description: "Text del botó d'acció principal (ex: Sol·licita la teva auditoria)"
 required: false
 translatable: true
-default_value: {}
+default_value: {  }
 default_value_callback: ''
-settings: {}
+settings: {  }
 field_type: string

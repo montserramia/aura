@@ -1,0 +1,28 @@
+uuid: 16456958-c2db-42bd-8a83-8be77183375b
+langcode: ca
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - filter.format.basic_html
+    - filter.format.full_html
+    - node.type.servei
+  module:
+    - text
+id: node.servei.body
+field_name: body
+entity_type: node
+bundle: servei
+label: Cos
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats:
+    - basic_html
+    - full_html
+field_type: text_with_summary

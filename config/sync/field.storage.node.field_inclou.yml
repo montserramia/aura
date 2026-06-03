@@ -1,18 +1,19 @@
+uuid: 8c34c92f-65bc-4d64-b667-dc3f6dcaa7f5
 langcode: en
 status: true
-dependencies: {}
+dependencies: {  }
 id: node.field_inclou
 field_name: field_inclou
 entity_type: node
 type: string
 settings:
   max_length: 255
-  is_ascii: false
   case_sensitive: false
+  is_ascii: false
 module: core
 locked: false
 cardinality: -1
 translatable: true
-indexes: {}
+indexes: {  }
 persist_with_no_fields: false
 custom_storage: false

@@ -1,3 +1,4 @@
+uuid: 0440f381-1294-4505-bf63-0aae85a75843
 langcode: ca
 status: true
 dependencies:
@@ -10,11 +11,12 @@ id: node.servei.field_resum
 field_name: field_resum
 entity_type: node
 bundle: servei
-label: 'Resum'
+label: Resum
 description: 'Text breu que apareix a les cards de la pàgina /serveis (2-3 línies màxim)'
 required: true
 translatable: true
-default_value: {}
+default_value: {  }
 default_value_callback: ''
-settings: {}
+settings:
+  allowed_formats: {  }
 field_type: text_long
