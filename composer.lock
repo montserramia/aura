@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "84c6787fd744d4e090a131ff4e9d5515",
+    "content-hash": "0cc76e07da71eb378c031c7577980ca5",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1047,60 +1047,6 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/admin_toolbar",
                 "issues": "https://www.drupal.org/project/issues/admin_toolbar"
-            }
-        },
-        {
-            "name": "drupal/aeo_multilingual",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/aeo_multilingual.git",
-                "reference": "1.1.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/aeo_multilingual-1.1.0.zip",
-                "reference": "1.1.0",
-                "shasum": "f49a5c35776785a5c52edea0d6651a8a9033bf93"
-            },
-            "require": {
-                "drupal/core": "^10.2 || ^11",
-                "php": ">=8.1"
-            },
-            "require-dev": {
-                "drupal/core-dev": "^10.2 || ^11"
-            },
-            "suggest": {
-                "drupal/metatag": "^2.2 — Recommended for meta description auditing",
-                "drupal/schema_metatag": "Recommended for JSON-LD schema markup auditing"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "1.1.0",
-                    "datestamp": "1775476719",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Montse Ramia (montserramia)",
-                    "homepage": "https://www.drupal.org/u/montserramia",
-                    "role": "Maintainer"
-                }
-            ],
-            "description": "Optimize multilingual Drupal sites for Answer Engines and AI citations",
-            "homepage": "https://www.drupal.org/project/aeo_multilingual",
-            "support": {
-                "source": "https://git.drupalcode.org/project/aeo_multilingual",
-                "issues": "https://www.drupal.org/project/issues/aeo_multilingual"
             }
         },
         {
